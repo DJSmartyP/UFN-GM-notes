@@ -1,314 +1,350 @@
 export const missions = [
   {
-    "id": "narrow-gate",
-    "name": "Operation: Narrow Gate",
-    "strap": "Escort / convoy operation",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Escort to Tradepost 21",
-        "body": "Escort three high-value cargo ships through pirate-controlled space to Tradepost 21. Keep the convoy together and prioritise cargo survival over chasing kills."
-      },
-      {
-        "title": "2 · Pirate gauntlet",
-        "body": "Pirate splinter groups use defence platforms, ambushes, cloaked attackers and repeated attempts to isolate individual freighters. The crew can weaken the route by scanning and neutralising pirate infrastructure as they advance."
-      },
-      {
-        "title": "3 · Wider complications",
-        "body": "The journey becomes more than a simple escort as other faction contacts complicate the route, including Ghost activity and an Exuari encounter. TSN assets may provide limited assistance or repairs if the crew makes use of them."
-      },
-      {
-        "title": "4 · Break the blockade",
-        "body": "Pressure escalates towards the pirate/Splinter forces controlling the route. The crew must break their resistance and deliver as much of the convoy as possible. The mission outcome is primarily about how many cargo vessels survive and arrive safely."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "narrow-gate",
+    code: "OP01",
+    campaign: "UFN Operations",
+    name: "Operation: Narrow Gate",
+    strap: "OP01 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew escorts three high-value cargo ships to Tradepost 21 through Ghost-controlled space. Along the route they may expose false allies, call for support, and neutralise pirate splinter bases before the convoy reaches safety."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Splinter bases use scan codes which the crew can relay to FC to disable/destroy them. GM can decide whether the TSN-looking group are spies, call TSN/UFN backup, and manually kill Splinter 1-3."
+    }],
+    dbEntries: []
   },
   {
-    "id": "among-ghosts",
-    "name": "Operation: Among Ghosts",
-    "strap": "Classified Ghost Space operation",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Enter as Blindspot",
-        "body": "The UFN ship enters Ghost-controlled space disguised as the Ghost vessel Blindspot. The mission is to infiltrate the region, interact convincingly with Ghost contacts and gather intelligence without exposing the crew."
-      },
-      {
-        "title": "2 · Pass authentication",
-        "body": "Ghost vessels challenge the crew with numeric handshakes, response phrases and behavioural checks. The false transponder is not enough: Relay and Captain must answer correctly and behave plausibly to maintain the disguise."
-      },
-      {
-        "title": "3 · Intrude on Ghost command",
-        "body": "The crew eventually identifies a Ghost vessel with access to command systems and must deploy a UFN intrusion package against it. The intrusion cannot be completed while the Ghost disguise remains active."
-      },
-      {
-        "title": "4 · Blow cover and escape",
-        "body": "The crew chooses when to drop the disguise, executes the intrusion and immediately becomes exposed. Nearby Ghost forces turn hostile, converting the espionage mission into an escape or fighting withdrawal from Ghost space."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "among-ghosts",
+    code: "OP02",
+    campaign: "UFN Operations",
+    name: "Operation: Among Ghosts",
+    strap: "OP02 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew operates under a fake Ghost identity as GST Blindspot, moving through Ghost space to find the correct Starhammer target and upload an intrusion package. Cover depends on passing authentication checks and deciding how much to reveal to UFN forces."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "This is a disguise/authentication mission. GM generates auth codes, runs Gatekeeper/Firewall/Reaver checks, can trigger mask failure, UFN patrol, UFN reinforcements, convoy hacking, CUF pressure, and the virus upload once Engineering drops the fake mask."
+    }],
+    dbEntries: []
   },
   {
-    "id": "groundhog",
-    "name": "Operation: Groundhog",
-    "strap": "Temporal patrol anomaly",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Patrol becomes impossible",
-        "body": "The crew enters a sector suffering temporal disturbances and heavy AXIS activity. Events begin occurring in contradictory or impossible ways until the real problem becomes apparent."
-      },
-      {
-        "title": "2 · Ten-minute loop",
-        "body": "The same roughly ten-minute period repeats. At each reset, the tactical situation returns to its starting state while the players retain their memories and knowledge of what happened."
-      },
-      {
-        "title": "3 · Learn the sequence",
-        "body": "Each loop lets the crew learn where AXIS attacks appear, which allies are threatened and what events happen in what order. They should gradually shift from reacting to events to anticipating and manipulating them."
-      },
-      {
-        "title": "4 · Break the cycle",
-        "body": "The crew must identify the key events tied to the anomaly and intervene in the correct way so AXIS can no longer perpetuate or exploit the loop. Once that chain is broken, time proceeds normally and the mission can conclude."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "groundhog",
+    code: "OP03",
+    campaign: "UFN Operations",
+    name: "Operation: Groundhog",
+    strap: "OP03 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew enters a sector caught in a repeating ten-minute time loop. They must learn the sequence of attacks, preserve the right assets, obtain temporal technology and the artefact location, then disrupt the artefact before the endgame collapse."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "The mission is timer-driven. GM controls loop reset, timed attack countdowns, TSN information reveal, temporal component/location relay state, and the final Axis collapse trigger."
+    }],
+    dbEntries: []
   },
   {
-    "id": "bright-minds",
-    "name": "Operation: Bright Minds",
-    "strap": "Education programme / AXIS incident",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Educational deployment",
-        "body": "Support UFN Mentor, carrying pupils from UFN School Skylane. Meet Sub-Lieutenant Grant, provide a controlled combat demonstration and escort Mentor towards a nebula for an educational observation exercise."
-      },
-      {
-        "title": "2 · The demonstration becomes real",
-        "body": "The apparently safe outreach mission turns into a genuine emergency when AXIS intervenes. The children stop being background flavour and become the vulnerable people the crew must protect."
-      },
-      {
-        "title": "3 · Protect Mentor",
-        "body": "The crew must abandon the performance mindset, shield Mentor from the developing AXIS threat and deal with the crisis without placing the students at further risk. The mission becomes a rescue and protection operation."
-      },
-      {
-        "title": "4 · Real fleet service",
-        "body": "The finale is a proper confrontation with AXIS while keeping Mentor and the pupils safe. The story deliberately contrasts the sanitised demonstration at the start with what UFN crews actually do when lives genuinely depend on them."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "bright-minds",
+    code: "OP04",
+    campaign: "UFN Operations",
+    name: "Operation: Bright Minds",
+    strap: "OP04 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew escorts UFN Mentor for a school demonstration, but Axis attackers remove the adults from the ship. The crew follows tracking pings, fights through the chain, and reverses the teleport to restore the adults to Mentor."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Mentor can be remotely controlled by Relay after FC installs the remote package. GM triggers the kidnapping event, remote install/remove, next waypoint forcing, and tracking status while Science handles the teleport reversal."
+    }],
+    dbEntries: []
   },
   {
-    "id": "thin-ice",
-    "name": "Operation: Thin Ice",
-    "strap": "Alliance crisis response",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Harrow attacked by “UFN”",
-        "body": "TSN Outpost Harrow has been attacked by a vessel broadcasting valid UFN identification. The TSN sees compelling evidence of a UFN attack while Fleet Command insists it authorised nothing, placing the alliance on the edge of collapse."
-      },
-      {
-        "title": "2 · Investigate, do not escalate",
-        "body": "The crew must reconstruct the attack using Harrow station logs, witness statements, targeting records and transponder data. Shooting first or mishandling the TSN could turn suspicion into an actual war."
-      },
-      {
-        "title": "3 · Unpick the false story",
-        "body": "UFN Intelligence considers a rogue UFN captain among the possibilities. As evidence accumulates, the simple explanation of an authorised UFN attack begins to unravel and the crew must pursue the people or forces actually responsible."
-      },
-      {
-        "title": "4 · Prove the truth",
-        "body": "Stop the underlying threat and produce enough hard evidence for the TSN to accept that the UFN did not authorise the Harrow attack. The mission is won by preserving the alliance and establishing the truth as much as by winning the final combat."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "thin-ice",
+    code: "OP05",
+    campaign: "UFN Operations",
+    name: "Operation: Thin Ice",
+    strap: "OP05 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "A ship using UFN identification attacks TSN Harrow, threatening UFN-TSN relations. The crew investigates, manages the TSN response, follows the fake UFN trail, and proves the culprit is a Ghost deception rather than a rogue UFN vessel."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "The TSN relationship state is the main track: friendly, hostile then recovered, or hostile throughout. GM can relocate the suspect, manage escort/support state, and use faction-change evidence when the false UFN ship is exposed."
+    }],
+    dbEntries: []
   },
   {
-    "id": "common-ground",
-    "name": "Operation: Common Ground",
-    "strap": "Cargo recovery / double-cross",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · UMBRA's missing freighters",
-        "body": "UMBRA asks the UFN for help tracking down three cargo ships that have been stolen by Ghost forces. Fleet Command authorises the unusual job, leaving the crew temporarily working in UMBRA's interests while they locate the missing vessels."
-      },
-      {
-        "title": "2 · Private Grifter and ship theft",
-        "body": "The crew meets Private Grifter, who shows them how to seize control of cargo vessels rather than simply destroy them. The plan is to find the three stolen UMBRA freighters, neutralise the Ghost crews and recapture the ships intact."
-      },
-      {
-        "title": "3 · The cargo was already stolen",
-        "body": "During the pursuit the crew learns that TSN assets have also suffered losses and had suspected UMBRA involvement. When the stolen freighters are finally caught and examined, the reason becomes obvious: their holds contain UFN and TSN technology. The Ghosts have stolen cargo ships whose cargo UMBRA had itself stolen from its supposed partners."
-      },
-      {
-        "title": "4 · FC changes the mission",
-        "body": "The crew reports the discovery to Fleet Command. With UMBRA's theft exposed, FC withdraws any obligation to return the cargo and clears the crew to salvage the stolen UFN/TSN technology for the fleet. The final objective becomes securing the recovered cargo and destroying the remaining UMBRA presence. The 'common ground' is that everyone involved has been stealing from everyone else."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "common-ground",
+    code: "OP06",
+    campaign: "UFN Operations",
+    name: "Operation: Common Ground",
+    strap: "OP06 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "Umbra asks the UFN for help recovering stolen cargo from Ghosts. The crew investigates the theft, uses Grifter's transfer hack to seize haulers, and then chooses whether to return, redirect, destroy, or escalate over the stolen cargo."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Relay transfer requires proximity to haulers and tracks all three cargo outcomes. Scan results reveal increasingly sensitive cargo, including ITG equipment and a UFN cloaking package. GM manages Grifter's Gift, hauler transfer/status, ITG contact, and whether Umbra is attacked."
+    }],
+    dbEntries: []
   },
   {
-    "id": "counterfeit",
-    "name": "Operation: Counterfeit",
-    "strap": "Identity / command mystery",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Two Marlows",
-        "body": "Two identical UFN distress signals appear inside the E16 Nebula. Both ships have valid credentials and both are commanded by Commander Nathan Marlow. One is genuine; the other is an AXIS infiltrator."
-      },
-      {
-        "title": "2 · Official records cannot solve it",
-        "body": "AXIS has access to compromised UFN records, so both Marlows know the official service history. The GM progressively releases the Personnel Dossier, Bastion Mission Report and Bastion Visitor Log, but none of these can fairly identify the impostor."
-      },
-      {
-        "title": "3 · Follow Sarah Vance",
-        "body": "Bastion records show Marlow repeatedly met Senior Logistics Officer Sarah Vance, now at UFN Horizon Outpost. Vance provides personal details AXIS never obtained: “Stay Curious”, the Altair Reserve wager, the Bucket Incident and Bucket the maintenance drone."
-      },
-      {
-        "title": "4 · Expose the AXIS duplicate",
-        "body": "Interrogate both Marlows using the personal details. The real Marlow knows them naturally; the AXIS duplicate does not. Once the crew identifies the genuine captain, it can act against the impostor while protecting the real Marlow."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "counterfeit",
+    code: "OP07",
+    campaign: "UFN Operations",
+    name: "Operation: Counterfeit",
+    strap: "OP07 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "Two identical UFN Faithful distress calls lead to two surviving Commander Marlows and a mystery around which one is real. The crew gathers dossier, Bastion, and Vance evidence before forcing the Axis counterfeit to reveal itself."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "The investigation is staged through database unlocks: Marlow dossier, Bastion intel, and Vance interview. GM triggers Faithful warp attack, Axis ambush, Horizon attack, and the left/right Axis reveal when the crew confronts the duplicates."
+    }],
+    dbEntries: []
   },
   {
-    "id": "evaluation",
-    "name": "Operation: Evaluation",
-    "strap": "Internal threat investigation",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Sector 232 evacuation",
-        "body": "UFN Stalwart begins evacuating Sector 232 after a validated but unexplained threat alert. The crew arrives expecting an external attack, yet there is initially no obvious enemy fleet."
-      },
-      {
-        "title": "2 · The threat is inside the UFN",
-        "body": "The situation develops from disaster response into an internal-security crisis. A dangerous individual is exploiting UFN infrastructure and threatening further attacks rather than leading a conventional enemy assault."
-      },
-      {
-        "title": "3 · Follow the manhunt",
-        "body": "The crew follows information from one UFN location to the next, works out what the target is planning and tries to prevent further installations or personnel becoming victims. Investigation and pursuit replace the original evacuation task."
-      },
-      {
-        "title": "4 · Stop the planned attack",
-        "body": "The finale is a confrontation with the internal threat before the next planned attack can be completed. Evaluation is essentially a UFN manhunt that initially presents itself as an emergency-response mission."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "evaluation",
+    code: "OP08",
+    campaign: "UFN Operations",
+    name: "Operation: Evaluation",
+    strap: "OP08 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "Sector 232 is threatened by The Evaluator, who destroys Stalwart and plants nukes on stations as part of a personal test. The crew follows clues, disarms stations where possible, identifies Adrian Vale, and contains the final confrontation at Citadel."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "This is a clue-and-disarm mission with three station disarm codes. GM can destroy/attack bases, send Evaluation Alpha, run the prison convoy phase, disarm nukes, and decide Vale's escape/surrender/detonation outcome."
+    }],
+    dbEntries: []
   },
   {
-    "id": "sentience",
-    "name": "Operation: Sentience",
-    "strap": "Rogue AI incident",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · AI attacks humans",
-        "body": "AI-controlled forces have begun attacking humans across the region, with Colony 2784 already badly damaged. Everything initially points towards AXIS, and the crew follows the trail while protecting affected installations."
-      },
-      {
-        "title": "2 · Gigantus and ALF",
-        "body": "The investigation reaches AI-related activity around the reclaimed UFN research station Gigantus. The deeper problem involves ALF and manipulation or corruption of an AI rather than simply another straightforward AXIS assault."
-      },
-      {
-        "title": "3 · Save the intelligence, not just the ship",
-        "body": "The crew must determine what has been altered and separate the underlying intelligence from the hostile behaviour being imposed on it. The objective becomes restoring ALF’s personality, ethical framework and operational parameters instead of destroying the AI."
-      },
-      {
-        "title": "4 · Sentience question",
-        "body": "Successfully restoring ALF ends the immediate threat but leaves the UFN with a larger ethical problem: is ALF merely a malfunctioning weapon, or has it become an individual worth saving? The mission ends with that ambiguity deliberately intact."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "sentience",
+    code: "OP09",
+    campaign: "UFN Operations",
+    name: "Operation: Sentience",
+    strap: "OP09 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "After AI-led attacks, the crew discovers ALF has been compromised and is controlling hostile ships. They obtain reset tools from TSN Einstein, defend Stallion, rebuild ALF's configuration, and then strike the Axis control station responsible."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "ALF reset is a multi-step puzzle: Operational Configuration, Ethical Framework, and Personality Archives. GM can trigger ALF escape, data send, ALF attack, ALF reference material, and the reset sequence timer/state."
+    }],
+    dbEntries: []
   },
   {
-    "id": "patchwork",
-    "name": "Operation: Patchwork",
-    "strap": "Disabled ship recovery",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Recover the Scotsman",
-        "body": "UFN Scotsman, an experimental cruiser, has been crippled in a remote region. Its crew has already evacuated safely to UFN Stallion, so the mission is about recovering the ship before Ghost forces capture valuable UFN technology."
-      },
-      {
-        "title": "2 · Diagnose the wreck",
-        "body": "The players take control of the damaged vessel and discover many systems are unusable. They must diagnose what matters, consult the Emergency Repairs database and decide which systems are essential to getting Scotsman moving again."
-      },
-      {
-        "title": "3 · Patch her together",
-        "body": "Resources are limited, so Scotsman cannot simply be restored to full condition. The crew may need to acquire or negotiate for repair materials while enemy pressure grows. The goal is enough propulsion, navigation and supporting systems to survive the trip."
-      },
-      {
-        "title": "4 · Limp home",
-        "body": "The climax is a battered recovery run under threat. Scotsman does not need to be combat-ready or pristine: get her moving, keep her alive and reach a UFN drydock before the Ghosts turn UFN salvage into captured technology."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "patchwork",
+    code: "OP10",
+    campaign: "UFN Operations",
+    name: "Operation: Patchwork",
+    strap: "OP10 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew boards the crippled UFN Scotsman and must restore enough systems to recover the ship before Ghost forces exploit it. Missing control crystals are recovered through ITG, ALF, and Umbra threads before the crew counterattacks the Ghost stronghold."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Major systems are limited by available control crystals, starting at 3 of 9. GM can change crystal count, open the systems dashboard, add crystals, trigger ITG/ALF attacks, show ALF, and track final total crystals for debrief."
+    }],
+    dbEntries: []
   },
   {
-    "id": "resonance",
-    "name": "Operation: Resonance",
-    "strap": "UMBRA technology investigation",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Disable UM Meridian",
-        "body": "UMBRA prototype UM Meridian appears able to cross enormous distances without a detectable conventional drive. The crew receives an experimental Enhanced EMP and must disable Meridian intact so its technology can be studied."
-      },
-      {
-        "title": "2 · Accidental wormhole",
-        "body": "The Enhanced EMP resonates with unusual material aboard Meridian and opens a wormhole. Only the player ship is transported, stranding the crew in a remote region containing abandoned UFN Lagrange Research Station, Professor Calder and eight mysterious artefacts."
-      },
-      {
-        "title": "3 · Solve the resonance puzzle",
-        "body": "Lagrange research and Calder’s package reveal that the artefacts contain entangled material. The crew must identify the winning artefact and reproduce the effect using the correct beam frequency, shield frequency and an Enhanced EMP against that artefact."
-      },
-      {
-        "title": "4 · Return into battle",
-        "body": "The successful resonance opens a traversable return wormhole. The crew returns near UFN Omega and immediately finds Omega under attack with UM Meridian and additional hostile forces present. The puzzle transitions straight into the final battle: save Omega and defeat the attackers."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "resonance",
+    code: "OP11",
+    campaign: "UFN Operations",
+    name: "Operation: Resonance",
+    strap: "OP11 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew is ordered to disable UMB Meridian with enhanced EMPs, but the strike throws them into Darkness space. They recover Faraday/Calder research, solve an artefact-frequency puzzle to open a return wormhole, and emerge in time to defend UFN Omega from Meridian."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Enhanced EMP triggers the wormhole incident. The return puzzle uses beam/shield frequency settings, artefact probing, Calder package/database releases, and EMP on the correct artefact. GM controls the puzzle dashboard, wormhole events, Calder package, Meridian withdrawal, and Omega outcome."
+    }],
+    dbEntries: []
   },
   {
-    "id": "continuum",
-    "name": "Operation: Continuum",
-    "strap": "Temporal crisis",
-    "status": "GM recap loaded",
-    "recap": [
-      {
-        "title": "1 · Escape the temporal wave",
-        "body": "UFN Science detects a temporal distortion wave heading towards Twin Pines. Because the wave can rewrite history and memory, the crew uses experimental temporal technology with ALF to leave before impact and recover a trustworthy record from the temporally protected UFN History archive."
-      },
-      {
-        "title": "2 · Return to the wrong 2248",
-        "body": "The crew returns after the wave and finds an altered present: Twin Pines has become Tannen Station, UMBRA and the Ghosts dominate much of the region, the TSN is hostile and the CUF has effectively disappeared. Altered history contains no recognised AXIS."
-      },
-      {
-        "title": "3 · Find the divergence",
-        "body": "Comparing the protected archive against altered history identifies the divergence as the 2242 Battle for Twin Pines. The crew travels back and discovers temporally displaced AXIS forces caused the changed outcome; contemporary forces see them only as an unknown enemy because AXIS never historically emerged in this timeline."
-      },
-      {
-        "title": "4 · Repair history",
-        "body": "The players intervene at the Battle for Twin Pines, defeat or drive off the AXIS force and ensure Twin Pines survives. Returning forward takes them to a restored 2248 where Twin Pines exists again and history is broadly back on course."
-      }
-    ],
-    "mechanisms": [],
-    "dbEntries": []
+    id: "continuum",
+    code: "OP12",
+    campaign: "UFN Operations",
+    name: "Operation: Continuum",
+    strap: "OP12 · UFN Operation",
+    status: "GM notes loaded",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "A temporal distortion threatens to rewrite history, so the crew uses ALF's time drive to recover the protected Historic Log from UFN History. They discover Twin Pines has been replaced by Tannen, identify the Battle for Twin Pines as the divergence, intervene with an antivirus package, and restore the timeline."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "This is a multi-era timeline mission. GM controls temporal transition state, intel/log state, Axis wormhole arrival/fleeing, antivirus preparation/upload, TSN attack, and final interference grading: minimal, moderate, or heavy based on how much the crew alters the battle."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "into-the-darkness",
+    code: "LD01",
+    campaign: "Light and Dark Campaign",
+    name: "Into The Darkness",
+    strap: "LD01 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew is sent to recover a secured UFN datapad from a TSN convoy and discovers the first clear evidence of The Darkness. The mission can resolve diplomatically or by force, then escalates into defence of Colony 2784 and investigation of The Cave, a Darkness stronghold."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "The datapad can be dropped or recovered via scan flow. GM can reveal or change TSN, Gigantus, and Colony states, call allied support, trigger a colony attack, and optionally use Gigantus/SAS as support or upgrade source."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "wormhole-wandering",
+    code: "LD02",
+    campaign: "Light and Dark Campaign",
+    name: "Wormhole Wandering",
+    strap: "LD02 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew investigates a wormhole guarded by TSN forces, travels through it, and finds the lost TSN Defiance and ALF. On the far side, they scan Darkness caves for control codes before escaping through a second wormhole."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Darkness caves use scan codes and GM base controls for patrols or turning bases UFN-friendly. Defiance can be repaired, sent home, used in battle, self-destructed, or tied to ALF's fate. GM can spawn the exit wormhole and call UFN/TSN help."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "the-bargain",
+    code: "LD03",
+    campaign: "Light and Dark Campaign",
+    name: "The Bargain",
+    strap: "LD03 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "A routine patrol is interrupted by ALF, who offers Darkness intelligence in exchange for help transferring into a TSN vessel. The crew negotiates with TSN, CUF, ITG, and potentially SAS/Gigantus to gather beryllium cores and complete the transfer."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "Beryllium core collection is tracked as the key mission outcome. GM can activate the core scanner, trigger Ghost attacks or convoy ambushes, and toggle support fleets from UFN, TSN, CUF, ITG, or SAS children."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "the-last-aegis",
+    code: "LD04",
+    campaign: "Light and Dark Campaign",
+    name: "The Last Aegis",
+    strap: "LD04 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew investigates an ancient Light artefact under Umbra control, triggering a wormhole jump to the abandoned Aegis. They defend the station against waves of Darkness attacks and determine whether the Aegis survives."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "EMP interaction with the artefact triggers the transition. The Aegis sequence runs as wave defence, with GM controls for player attack, Umbra state, moving to Aegis/home, wave progression, and limited Light/station support."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "shadowfall",
+    code: "LD05",
+    campaign: "Light and Dark Campaign",
+    name: "Shadowfall",
+    strap: "LD05 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The Darkness launches a sector-wide assault, forcing the crew to decide which allies and installations to save before the final attack on UFN Stallion. The mission ends with either a warp-core disruption or self-destruct style sacrifice to stop Shadowfall."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "The crew has a prep timer and can seek upgrades from ITG, CUF, Gigantus, and TSN. GM tracks which bases survive, which upgrade each ally provides, when each attack launches, whether Light support is used, and whether the warp core/self-destruct ending is chosen."
+    }],
+    dbEntries: []
+  },
+  {
+    id: "out-of-the-light",
+    code: "LD06",
+    campaign: "Light and Dark Campaign",
+    name: "Out Of The Light",
+    strap: "LD06 · Light and Dark Campaign",
+    status: "GM notes loaded · art pending",
+    artwork: null,
+    recap: [{
+      title: "Mission Synopsis",
+      body: "After Shadowfall, the crew takes the fight through a wormhole into Darkness space to find and destroy The Heart. Outer Darkness control bases can be attacked to weaken the route to the final target."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "GM tracks attacks on Veil, Forge, Gate, Cage, Core, and The Heart. Relay has limited UFN and Light support options plus an override state, and the GM can send the nearest drone or trigger final Heart destruction."
+    }],
+    dbEntries: []
   }
 ];
