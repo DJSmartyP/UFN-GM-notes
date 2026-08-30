@@ -1,10 +1,11 @@
-const CACHE = "ufn-gm-shell-v7";
+const CACHE = "ufn-gm-shell-v9";
 const SHELL = [
   "./",
   "./index.html",
-  "./styles.css?v=7",
-  "./app.js?v=7",
-  "./data/missions.js?v=7",
+  "./styles.css?v=9",
+  "./app.js?v=9",
+  "./data/missions.js?v=9",
+  "./data/db-pages.js?v=9",
   "./manifest.webmanifest",
   "./assets/ufn-gm-mark.svg"
 ];
@@ -31,6 +32,7 @@ self.addEventListener("fetch", event => {
     url.pathname.endsWith("/app.js") ||
     url.pathname.endsWith("/styles.css") ||
     url.pathname.endsWith("/data/missions.js") ||
+    url.pathname.endsWith("/data/db-pages.js") ||
     url.pathname.endsWith("/")
   );
 

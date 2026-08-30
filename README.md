@@ -45,3 +45,13 @@ Mission pages no longer split Story Recap and Special Mechanisms into half-width
 
 ## v7 mechanics width fix
 GM reference notes now always span the full Special Mechanisms grid, regardless of viewport height or landscape/tablet breakpoints. This fixes the half-width reference card visible on taller landscape devices. Actual action controls can still use multiple columns later.
+
+
+## v9 - Custom DB + Player Mechanics
+
+- Wired the complete mission-specific custom DB handoff into the database browser: 66 pages across OP02, OP04, OP06, OP07, OP08, OP09, OP10, OP11 and OP12.
+- Database browsing is page-first with mission-local search, folder filters, one-tap readers, and Previous/Next page navigation.
+- Added a dedicated Player Mechanics section using station-labelled tiles.
+- OP04 Bright Minds now includes the Signal Tracer player mechanic for Relay.
+- Missions with no supplied player mechanics show an explicit empty state ready for later content.
+- Cache version bumped to v9.

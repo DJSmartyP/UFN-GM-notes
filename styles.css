@@ -352,9 +352,9 @@ button { -webkit-tap-highlight-color: transparent; }
   bottom: max(10px, env(safe-area-inset-bottom));
   transform: translateX(-50%);
   z-index: 60;
-  width: min(calc(100% - 20px), 520px);
+  width: min(calc(100% - 20px), 650px);
   display: grid;
-  grid-template-columns: 1fr 1fr 1.25fr;
+  grid-template-columns: .85fr 1fr .9fr 1.25fr;
   gap: 7px;
   padding: 7px;
   border: 1px solid rgba(215,173,75,.28);
@@ -378,6 +378,7 @@ button { -webkit-tap-highlight-color: transparent; }
   .main { padding-left: 22px; padding-right: 22px; }
   .mission-grid { grid-template-columns: repeat(2, 1fr); }
   .mech-grid { grid-template-columns: repeat(2, 1fr); }
+  .player-mechanics-grid:not(.single) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (orientation: landscape) and (max-height: 600px) {
@@ -393,7 +394,8 @@ button { -webkit-tap-highlight-color: transparent; }
   .mission-layout .section { margin-top: 10px; }
   .mission-layout .section:first-child { margin-top: 0; }
   #recap .section-body,
-  #mechanisms .section-body { padding: 10px 12px; }
+  #mechanisms .section-body,
+  #player-mechanics .section-body { padding: 10px 12px; }
   #mechanisms .mech-grid { grid-template-columns: 1fr; }
   #mechanisms .mech-note { min-height: 0; padding: 10px 12px; }
   #mechanisms .mech-note span { margin-top: 3px; line-height: 1.35; }
@@ -441,3 +443,241 @@ button { -webkit-tap-highlight-color: transparent; }
 .mech-note-tag { color: var(--gold); font-size: 9px; font-weight: 850; letter-spacing: .13em; margin-bottom: 5px; }
 .mech-note strong { display: block; }
 .mech-note span { display: block; margin-top: 5px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+
+/* Player-facing mission mechanics */
+.player-mechanics-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+.player-mechanics-grid.single { grid-template-columns: 1fr; }
+.player-mechanic-tile {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid #31465e;
+  border-radius: 13px;
+  background: var(--bg-2);
+}
+.player-mechanic-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+.player-mechanic-topline strong {
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.2;
+}
+.station-chip {
+  flex: 0 0 auto;
+  padding: 5px 8px;
+  border: 1px solid rgba(215,173,75,.42);
+  border-radius: 999px;
+  color: var(--gold-2);
+  background: rgba(215,173,75,.07);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.player-mechanic-label {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.player-mechanic-tile p {
+  margin: 4px 0 0;
+  color: #d9e3ee;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* v8 mission database browser */
+.db-launch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid rgba(215,173,75,.38);
+  border-radius: 13px;
+  background: linear-gradient(135deg, rgba(215,173,75,.10), rgba(215,173,75,.025));
+}
+.db-launch > div { min-width: 0; }
+.db-launch strong { display: block; font-size: 16px; }
+.db-launch span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 1.35; }
+.db-launch-button {
+  flex: 0 0 auto;
+  min-height: 46px;
+  padding: 0 15px;
+  border: 1px solid var(--gold-2);
+  border-radius: 11px;
+  background: var(--gold-2);
+  color: #07111f;
+  font-weight: 900;
+}
+.db-quick-list { display: grid; gap: 7px; margin-top: 10px; }
+.db-quick-entry,
+.db-quick-more {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--bg-2);
+  color: var(--text);
+  text-align: left;
+}
+.db-quick-entry span { min-width: 0; font-weight: 800; }
+.db-quick-entry small { flex: 0 0 auto; max-width: 42%; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.db-quick-more { justify-content: center; color: var(--gold-2); font-weight: 850; }
+
+.db-browser-heading { margin-bottom: 12px; padding: 4px 2px 0; }
+.db-browser-heading .meta { color: var(--gold); font-size: 10px; font-weight: 850; letter-spacing: .13em; }
+.db-browser-title-row { display: flex; align-items: end; justify-content: space-between; gap: 12px; }
+.db-browser-heading h1 { margin: 4px 0 3px; font-size: clamp(26px, 7vw, 42px); line-height: 1; }
+.db-browser-heading p { margin: 0; color: var(--muted); font-size: 13px; }
+.db-mission-button { flex: 0 0 auto; min-width: 92px; }
+
+.db-browser-panel {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: visible;
+  background: rgba(11,23,40,.9);
+  box-shadow: var(--shadow);
+}
+.db-browser-toolbar {
+  position: sticky;
+  top: 72px;
+  z-index: 30;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: rgba(11,23,40,.97);
+  backdrop-filter: blur(12px);
+}
+.db-search-label { display: block; margin: 0 2px 7px; color: var(--muted); font-size: 11px; font-weight: 750; }
+.db-result-status { padding: 9px 13px 0; color: var(--muted); font-size: 11px; }
+.db-browser-list { padding: 10px 12px 14px; }
+.db-file-group + .db-file-group { margin-top: 16px; }
+.db-file-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 0 3px 7px;
+  color: var(--gold);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+.db-file-group-heading small { color: var(--muted); font-size: 10px; }
+.db-file-group-list { display: grid; gap: 6px; }
+.db-file-row {
+  width: 100%;
+  min-height: 57px;
+  display: grid;
+  grid-template-columns: 34px minmax(0,1fr) 20px;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--bg-2);
+  color: var(--text);
+  text-align: left;
+}
+.db-file-row:active { transform: translateY(1px); }
+.db-file-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(215,173,75,.42);
+  border-radius: 8px;
+  color: var(--gold-2);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+.db-file-copy { min-width: 0; }
+.db-file-copy strong { display: block; font-size: 14px; line-height: 1.2; }
+.db-file-copy small {
+  display: block;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.25;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.db-file-chevron { color: var(--gold); font-size: 24px; }
+
+.reader-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 13px;
+  color: var(--muted);
+  font-size: 11px;
+}
+.reader-pages-button {
+  min-height: 42px;
+  padding: 0 13px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--text);
+  font-weight: 850;
+}
+.reader-trigger {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: 10px;
+  padding: 9px 11px;
+  border-left: 3px solid var(--gold);
+  background: rgba(215,173,75,.06);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.35;
+}
+.reader-trigger strong { flex: 0 0 auto; color: var(--gold-2); text-transform: uppercase; font-size: 9px; letter-spacing: .08em; }
+.reader-body p { margin: 0 0 1em; }
+.reader-body p:last-child { margin-bottom: 0; }
+.reader-sequence { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; margin-top: 14px; }
+.action-button:disabled { opacity: .35; cursor: default; }
+
+@media (max-width: 390px) {
+  .bottom-nav { gap: 5px; padding: 6px; }
+  .bottom-nav button { min-height: 46px; font-size: 10.5px; }
+}
+
+@media (max-width: 520px) {
+  .db-launch { align-items: stretch; flex-direction: column; }
+  .db-launch-button { width: 100%; }
+  .db-quick-entry { align-items: flex-start; flex-direction: column; gap: 3px; }
+  .db-quick-entry small { max-width: 100%; }
+  .db-browser-title-row { align-items: flex-start; }
+  .db-mission-button { min-width: 78px; }
+  .reader-sequence { grid-template-columns: 1fr; }
+  .reader-actions { flex-direction: column; }
+}
+
+@media (orientation: landscape) {
+  .db-browser-toolbar { top: 60px; }
+  .db-browser-list { padding: 9px 12px 13px; }
+  .db-file-group-list { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  .reader { max-width: 940px; }
+  .reader-body { padding: 16px 20px; }
+}
