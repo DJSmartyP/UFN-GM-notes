@@ -3,9 +3,9 @@
 A phone-first GM companion app for EmptyEpsilon missions.
 
 ## What is already wired in
-- Front page listing all 12 missions
+- Front page listing all 12 missions with mission artwork
 - Mission screen with:
-  1. Story Recap
+  1. Story Recap (full GM-memory breakdowns loaded)
   2. Special Mechanisms
   3. Mission Database (primary feature)
 - Sticky phone navigation
@@ -15,6 +15,10 @@ A phone-first GM companion app for EmptyEpsilon missions.
 - PWA manifest + basic service worker for install/offline shell
 - UFN dark navy / gold placeholder styling
 - Mission-select artwork extracted into 12 lightweight mission thumbnails
+
+## Mission content
+
+All 12 GM story recaps are now populated. Special mechanisms and database pages remain intentionally data-driven placeholders for the final mission content.
 
 ## Where mission content goes
 Edit `data/missions.js`.
