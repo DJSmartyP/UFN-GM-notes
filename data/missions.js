@@ -132,24 +132,24 @@ export const missions = [
   {
     "id": "common-ground",
     "name": "Operation: Common Ground",
-    "strap": "Unusual assistance request",
+    "strap": "Cargo recovery / double-cross",
     "status": "GM recap loaded",
     "recap": [
       {
-        "title": "1 · UMBRA asks for help",
-        "body": "Regional instability and attacks on civilian trade become serious enough that UMBRA Regional Command asks the UFN for assistance. Fleet Command reluctantly approves limited operational cooperation."
+        "title": "1 · UMBRA's missing freighters",
+        "body": "UMBRA asks the UFN for help tracking down three cargo ships that have been stolen by Ghost forces. Fleet Command authorises the unusual job, leaving the crew temporarily working in UMBRA's interests while they locate the missing vessels."
       },
       {
-        "title": "2 · Work beside an enemy",
-        "body": "The crew operates alongside UMBRA while both sides remain openly distrustful. They must identify contacts carefully, protect civilian shipping and avoid treating every UMBRA vessel as an automatic target."
+        "title": "2 · Private Grifter and ship theft",
+        "body": "The crew meets Private Grifter, who shows them how to seize control of cargo vessels rather than simply destroy them. The plan is to find the three stolen UMBRA freighters, neutralise the Ghost crews and recapture the ships intact."
       },
       {
-        "title": "3 · Cooperation becomes necessary",
-        "body": "As the wider threat becomes clearer, neither side can stabilise the region effectively alone. The UFN and UMBRA are pushed from cooperation of convenience into genuine tactical coordination."
+        "title": "3 · The cargo was already stolen",
+        "body": "During the pursuit the crew learns that TSN assets have also suffered losses and had suspected UMBRA involvement. When the stolen freighters are finally caught and examined, the reason becomes obvious: their holds contain UFN and TSN technology. The Ghosts have stolen cargo ships whose cargo UMBRA had itself stolen from its supposed partners."
       },
       {
-        "title": "4 · Common ground",
-        "body": "The mission builds to a joint confrontation with the forces destabilising the region. The UFN and UMBRA do not become friends, but both prove that enemies can cooperate when a greater immediate threat gives them common ground."
+        "title": "4 · FC changes the mission",
+        "body": "The crew reports the discovery to Fleet Command. With UMBRA's theft exposed, FC withdraws any obligation to return the cargo and clears the crew to salvage the stolen UFN/TSN technology for the fleet. The final objective becomes securing the recovered cargo and destroying the remaining UMBRA presence. The 'common ground' is that everyone involved has been stealing from everyone else."
       }
     ],
     "mechanisms": [],
