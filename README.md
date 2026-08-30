@@ -79,3 +79,14 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Player Mechanics now contains 55 mission-specific entries across OP01-OP12 and LD01-LD06.
 - SO01 / The Tortuga Run remains excluded.
 - Cache version bumped to v12.
+
+
+## v13 - Installable database app icon
+
+- Added a dedicated UFN GM Mission Database icon designed to remain recognisable at small launcher sizes.
+- Added 192px and 512px standard PWA icons.
+- Added 192px and 512px maskable Android icons.
+- Added Apple touch icon and favicon assets.
+- Wired all icon assets into `manifest.webmanifest` and `index.html`.
+- Updated installed app short name to `UFN GM DB`.
+- Cache version bumped to v13 so installed PWAs pick up the new icon metadata.
