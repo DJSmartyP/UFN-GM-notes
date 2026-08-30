@@ -58,6 +58,9 @@ function renderHome() {
     const node = template.content.cloneNode(true);
     const button = node.querySelector(".mission-card");
     node.querySelector(".mission-card-index").textContent = String(i + 1).padStart(2, "0");
+    const art = node.querySelector(".mission-card-art");
+    art.src = `assets/missions/${mission.id}.png`;
+    art.alt = `${mission.name} mission art`;
     node.querySelector(".mission-card-name").textContent = mission.name;
     node.querySelector(".mission-card-strap").textContent = mission.strap;
     button.addEventListener("click", () => {

@@ -14,6 +14,7 @@ A phone-first GM companion app for EmptyEpsilon missions.
 - Portrait-first layout with landscape reflow
 - PWA manifest + basic service worker for install/offline shell
 - UFN dark navy / gold placeholder styling
+- Mission-select artwork extracted into 12 lightweight mission thumbnails
 
 ## Where mission content goes
 Edit `data/missions.js`.

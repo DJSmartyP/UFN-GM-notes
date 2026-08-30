@@ -1,5 +1,5 @@
-const CACHE = "ufn-gm-shell-v1";
-const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./data/missions.js", "./manifest.webmanifest", "./assets/ufn-gm-mark.svg"];
+const CACHE = "ufn-gm-shell-v2";
+const FILES = ["./", "./index.html", "./styles.css", "./app.js", "./data/missions.js", "./manifest.webmanifest", "./assets/ufn-gm-mark.svg", "./assets/missions/narrow-gate.png", "./assets/missions/among-ghosts.png", "./assets/missions/groundhog.png", "./assets/missions/bright-minds.png", "./assets/missions/thin-ice.png", "./assets/missions/common-ground.png", "./assets/missions/counterfeit.png", "./assets/missions/evaluation.png", "./assets/missions/sentience.png", "./assets/missions/patchwork.png", "./assets/missions/resonance.png", "./assets/missions/continuum.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES)));
