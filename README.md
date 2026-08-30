@@ -41,3 +41,7 @@ The mission synopsis and special-mechanics wording in `data/missions.js` is the 
 
 ## v6 landscape fix
 Mission pages no longer split Story Recap and Special Mechanisms into half-width landscape columns. Recap, mechanics and database now remain full-width and stacked, with mechanics compacted for short landscape screens.
+
+
+## v7 mechanics width fix
+GM reference notes now always span the full Special Mechanisms grid, regardless of viewport height or landscape/tablet breakpoints. This fixes the half-width reference card visible on taller landscape devices. Actual action controls can still use multiple columns later.

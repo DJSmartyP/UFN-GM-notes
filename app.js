@@ -1,4 +1,4 @@
-import { missions } from "./data/missions.js?v=6";
+import { missions } from "./data/missions.js?v=7";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");
@@ -149,7 +149,7 @@ function renderMission(mission) {
       <section class="section" id="mechanisms">
         <div class="section-header">
           <h2>Special Mechanisms</h2>
-          <span class="tag">LIVE GM</span>
+          <span class="tag">GM REFERENCE</span>
         </div>
         <div class="section-body">${mechanismsHtml}</div>
       </section>

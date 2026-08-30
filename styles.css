@@ -429,6 +429,8 @@ button { -webkit-tap-highlight-color: transparent; }
 }
 .mission-card-art-placeholder .mission-card-index { color: var(--gold-2); }
 .mech-note {
+  grid-column: 1 / -1;
+  width: 100%;
   min-height: 62px;
   border-radius: 13px;
   border: 1px solid rgba(215,173,75,.32);
