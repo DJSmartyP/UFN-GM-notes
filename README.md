@@ -52,3 +52,7 @@ This build uses neutral UFN placeholder styling only. When the training portal f
 
 ## GitHub Pages
 Upload the contents of this folder to a GitHub repository and enable GitHub Pages from the repository settings.
+
+
+## Update fix
+Build `recaps-v3` uses a network-first service worker for HTML/JS/CSS/mission data and a versioned mission-data import. This prevents an older installed/PWA copy from silently continuing to use stale recap data after deployment.
