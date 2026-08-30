@@ -386,14 +386,17 @@ button { -webkit-tap-highlight-color: transparent; }
   .main { padding-top: 10px; }
   .mission-grid { grid-template-columns: repeat(2, 1fr); }
   .mission-card { min-height: 68px; }
-  .mission-layout {
-    display: grid;
-    grid-template-columns: .8fr 1.2fr;
-    gap: 12px;
-    align-items: start;
-  }
-  .mission-layout .section { margin-top: 0; }
-  .mission-layout #database { grid-column: 1 / -1; }
+
+  /* Mission reference sections stay full-width in landscape.
+     The database is the working area; recap/mechanics should never become side panes. */
+  .mission-layout { display: block; }
+  .mission-layout .section { margin-top: 10px; }
+  .mission-layout .section:first-child { margin-top: 0; }
+  #recap .section-body,
+  #mechanisms .section-body { padding: 10px 12px; }
+  #mechanisms .mech-grid { grid-template-columns: 1fr; }
+  #mechanisms .mech-note { min-height: 0; padding: 10px 12px; }
+  #mechanisms .mech-note span { margin-top: 3px; line-height: 1.35; }
   .db-toolbar { top: 60px; }
 }
 

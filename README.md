@@ -37,3 +37,7 @@ Special-mechanic descriptions are presented as reference cards rather than fake 
 
 ## Content source
 The mission synopsis and special-mechanics wording in `data/missions.js` is the current authoritative GM copy supplied for this build. It replaces the earlier generated recap text.
+
+
+## v6 landscape fix
+Mission pages no longer split Story Recap and Special Mechanisms into half-width landscape columns. Recap, mechanics and database now remain full-width and stacked, with mechanics compacted for short landscape screens.
