@@ -55,3 +55,12 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - OP04 Bright Minds now includes the Signal Tracer player mechanic for Relay.
 - Missions with no supplied player mechanics show an explicit empty state ready for later content.
 - Cache version bumped to v9.
+
+
+## v10 - Player Mechanics source scan
+
+- Added OP01-OP12 and LD01-LD06 player-facing station mechanics from the canonical Lua source scan supplied by the GM.
+- SO01 / The Tortuga Run is intentionally excluded.
+- Replaced the earlier Bright Minds Signal Tracer placeholder with the canonical Science Signal Trace / Transport Reversal entries.
+- Common Call FC and standard H.I.D.E.S mechanics are inherited across the applicable mission set; missions with explicit local/legacy intrusion controls use those mission-specific variants.
+- Cache version bumped to v10.
