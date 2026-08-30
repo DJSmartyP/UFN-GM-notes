@@ -64,3 +64,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Replaced the earlier Bright Minds Signal Tracer placeholder with the canonical Science Signal Trace / Transport Reversal entries.
 - Common Call FC and standard H.I.D.E.S mechanics are inherited across the applicable mission set; missions with explicit local/legacy intrusion controls use those mission-specific variants.
 - Cache version bumped to v10.
+
+
+## v11
+- LD01-LD06 mission artwork loaded into the Light and Dark Campaign mission tiles.
+- Cache version bumped to v11.
