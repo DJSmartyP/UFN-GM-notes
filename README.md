@@ -1,62 +1,39 @@
-# UFN GM Mobile — Skeleton
+# UFN GM Mobile Companion
 
-A phone-first GM companion app for EmptyEpsilon missions.
+Phone-first GM companion for UFN / EmptyEpsilon missions.
 
-## What is already wired in
-- Front page listing all 12 missions with mission artwork
-- Mission screen with:
-  1. Story Recap (full GM-memory breakdowns loaded)
-  2. Special Mechanisms
-  3. Mission Database (primary feature)
-- Sticky phone navigation
-- Searchable/filterable DB viewer
-- Dedicated DB reader screen
-- Portrait-first layout with landscape reflow
-- PWA manifest + basic service worker for install/offline shell
-- UFN dark navy / gold placeholder styling
-- Mission-select artwork extracted into 12 lightweight mission thumbnails
+## Mission groups
 
-## Mission content
+### UFN Operations
+- OP01 — Operation: Narrow Gate
+- OP02 — Operation: Among Ghosts
+- OP03 — Operation: Groundhog
+- OP04 — Operation: Bright Minds
+- OP05 — Operation: Thin Ice
+- OP06 — Operation: Common Ground
+- OP07 — Operation: Counterfeit
+- OP08 — Operation: Evaluation
+- OP09 — Operation: Sentience
+- OP10 — Operation: Patchwork
+- OP11 — Operation: Resonance
+- OP12 — Operation: Continuum
 
-All 12 GM story recaps are now populated. Special mechanisms and database pages remain intentionally data-driven placeholders for the final mission content.
+### Light and Dark Campaign
+- LD01 — Into The Darkness
+- LD02 — Wormhole Wandering
+- LD03 — The Bargain
+- LD04 — The Last Aegis
+- LD05 — Shadowfall
+- LD06 — Out Of The Light
 
-## Where mission content goes
-Edit `data/missions.js`.
+The LD mission art is intentionally not included yet. The UI displays an LD code placeholder until final artwork is supplied.
 
-Each mission supports:
+## Current mission page
+1. Mission Synopsis — canonical GM recap supplied for each mission.
+2. Special Mechanisms — canonical GM reference note supplied for each mission.
+3. Mission Database — primary working area, ready for the actual database pages.
 
-```js
-{
-  recap: [
-    { title: "Stage 1", body: "GM-only recap text" }
-  ],
-  mechanisms: [
-    { id: "spawn-axis", label: "Spawn AXIS", description: "Creates two ships" }
-  ],
-  dbEntries: [
-    {
-      id: "historic-log",
-      type: "Historical Log",
-      title: "Twin Pines Historical Record",
-      description: "Short picker description",
-      body: "Full database page text"
-    }
-  ]
-}
-```
+Special-mechanic descriptions are presented as reference cards rather than fake buttons. Live GM controls can later be added as action entries without restructuring the page.
 
-The skeleton does not yet execute EmptyEpsilon commands. The mechanism buttons are intentionally data-driven placeholders so mission-specific behaviour can be attached later.
-
-## Training portal assets
-This build uses neutral UFN placeholder styling only. When the training portal files are supplied, replace/add its approved assets under `assets/` and update the CSS variables/components in `styles.css`.
-
-## GitHub Pages
-Upload the contents of this folder to a GitHub repository and enable GitHub Pages from the repository settings.
-
-
-## Update fix
-Build `recaps-v3` uses a network-first service worker for HTML/JS/CSS/mission data and a versioned mission-data import. This prevents an older installed/PWA copy from silently continuing to use stale recap data after deployment.
-
-
-## v4 correction
-- Corrected Operation: Common Ground recap to the canonical cargo-recovery / double-theft story involving Private Grifter, Ghost-stolen UMBRA freighters, stolen UFN/TSN technology, and Fleet Command authorising salvage and action against UMBRA.
+## Content source
+The mission synopsis and special-mechanics wording in `data/missions.js` is the current authoritative GM copy supplied for this build. It replaces the earlier generated recap text.

@@ -1,4 +1,4 @@
-import { missions } from "./data/missions.js?v=4";
+import { missions } from "./data/missions.js?v=5";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");
@@ -46,27 +46,61 @@ function renderHome() {
     <section class="hero">
       <div class="kicker">United Federated Navy</div>
       <h1>GM Mission Console</h1>
-      <p>Select a mission to open its GM recap, special mechanisms and mission database viewer.</p>
+      <p>Select a mission to open its GM synopsis, special mechanics and mission database viewer.</p>
     </section>
-    <section class="mission-grid" id="missionGrid"></section>
+    <div id="missionGroups"></div>
   `;
 
-  const grid = document.querySelector("#missionGrid");
+  const groupsRoot = document.querySelector("#missionGroups");
   const template = document.querySelector("#mission-card-template");
+  const groupOrder = ["UFN Operations", "Light and Dark Campaign"];
 
-  missions.forEach((mission, i) => {
-    const node = template.content.cloneNode(true);
-    const button = node.querySelector(".mission-card");
-    node.querySelector(".mission-card-index").textContent = String(i + 1).padStart(2, "0");
-    const art = node.querySelector(".mission-card-art");
-    art.src = `assets/missions/${mission.id}.png`;
-    art.alt = `${mission.name} mission art`;
-    node.querySelector(".mission-card-name").textContent = mission.name;
-    node.querySelector(".mission-card-strap").textContent = mission.strap;
-    button.addEventListener("click", () => {
-      location.hash = `#/mission/${mission.id}`;
+  groupOrder.forEach(groupName => {
+    const groupMissions = missions.filter(mission => mission.campaign === groupName);
+    if (!groupMissions.length) return;
+
+    const section = document.createElement("section");
+    section.className = "mission-group";
+    section.innerHTML = `
+      <div class="mission-group-heading">
+        <div>
+          <div class="mission-group-kicker">${groupName === "Light and Dark Campaign" ? "CAMPAIGN" : "MISSIONS"}</div>
+          <h2>${escapeHtml(groupName)}</h2>
+        </div>
+        <span>${groupMissions.length} missions</span>
+      </div>
+      <div class="mission-grid"></div>
+    `;
+
+    const grid = section.querySelector(".mission-grid");
+    groupMissions.forEach(mission => {
+      const node = template.content.cloneNode(true);
+      const button = node.querySelector(".mission-card");
+      node.querySelector(".mission-card-index").textContent = mission.code || "";
+      const art = node.querySelector(".mission-card-art");
+      const artWrap = node.querySelector(".mission-card-art-wrap");
+
+      if (mission.artwork === null) {
+        art.remove();
+        artWrap.classList.add("mission-card-art-placeholder");
+        const placeholder = document.createElement("div");
+        placeholder.className = "mission-card-placeholder-code";
+        placeholder.textContent = mission.code || "LD";
+        artWrap.prepend(placeholder);
+      } else {
+        art.src = mission.artwork || `assets/missions/${mission.id}.png`;
+        art.alt = `${mission.name} mission art`;
+      }
+
+      node.querySelector(".mission-card-name").textContent = mission.name;
+      node.querySelector(".mission-card-strap").textContent = mission.strap;
+      button.addEventListener("click", () => {
+        location.hash = `#/mission/${mission.id}`;
+      });
+      grid.appendChild(node);
     });
-    grid.appendChild(node);
+
+    groupsRoot.appendChild(section);
   });
 }
 
@@ -84,11 +118,16 @@ function renderMission(mission) {
   `).join("");
 
   const mechanismsHtml = mission.mechanisms.length
-    ? `<div class="mech-grid">${mission.mechanisms.map(mech => `
+    ? `<div class="mech-grid">${mission.mechanisms.map(mech => mech.kind === "action" ? `
         <button class="mech-button" data-mech="${escapeHtml(mech.id)}">
           <strong>${escapeHtml(mech.label)}</strong>
           <span>${escapeHtml(mech.description || "")}</span>
-        </button>`).join("")}</div>`
+        </button>` : `
+        <div class="mech-note">
+          <div class="mech-note-tag">GM REFERENCE</div>
+          <strong>${escapeHtml(mech.label)}</strong>
+          <span>${escapeHtml(mech.description || "")}</span>
+        </div>`).join("")}</div>`
     : `<div class="empty-state"><strong>No special mechanisms loaded</strong>Mission-specific controls can be added here later without changing the app structure.</div>`;
 
   app.innerHTML = `
