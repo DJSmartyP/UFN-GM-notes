@@ -73,6 +73,12 @@ export const missions = [
       label: "Special mechanics / GM note",
       description: "Mentor can be remotely controlled by Relay after FC installs the remote package. GM triggers the kidnapping event, remote install/remove, next waypoint forcing, and tracking status while Science handles the teleport reversal."
     }],
+    playerMechanics: [{
+      id: "signal-tracer",
+      name: "Signal Tracer",
+      station: "Relay",
+      description: "Relay will get a display showing the nearest signal. As they move towards the target the distance will reduce. Following these will eventually lead to the final ship."
+    }],
     dbEntries: []
   },
   {
