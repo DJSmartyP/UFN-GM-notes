@@ -26,7 +26,7 @@ Phone-first GM companion for UFN / EmptyEpsilon missions.
 - LD05 — Shadowfall
 - LD06 — Out Of The Light
 
-The LD mission art is intentionally not included yet. The UI displays an LD code placeholder until final artwork is supplied.
+LD01-LD06 mission artwork is included in the Light and Dark Campaign tiles.
 
 ## Current mission page
 1. Mission Synopsis — canonical GM recap supplied for each mission.
@@ -69,3 +69,13 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 ## v11
 - LD01-LD06 mission artwork loaded into the Light and Dark Campaign mission tiles.
 - Cache version bumped to v11.
+
+
+## v12 - Mission-specific Player Mechanics only
+
+- Removed Call FC from Player Mechanics because it is part of the generic ship package.
+- Removed all H.I.D.E.S / intrusion-clear tiles, including local and legacy variants, because they are generic rather than mission-specific.
+- Re-audited the supplied source list and restored mission-specific LD03 and LD04 player mechanics that were missing from the prior build.
+- Player Mechanics now contains 55 mission-specific entries across OP01-OP12 and LD01-LD06.
+- SO01 / The Tortuga Run remains excluded.
+- Cache version bumped to v12.

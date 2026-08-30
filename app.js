@@ -1,5 +1,5 @@
-import { missions } from "./data/missions.js?v=10";
-import { customDbPages } from "./data/db-pages.js?v=10";
+import { missions } from "./data/missions.js?v=12";
+import { customDbPages } from "./data/db-pages.js?v=12";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");
