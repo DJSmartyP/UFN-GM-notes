@@ -911,8 +911,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "Into The Darkness",
     strap: "LD01 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/into-the-darkness.png",
     recap: [{
       title: "Mission Synopsis",
       body: "The crew is sent to recover a secured UFN datapad from a TSN convoy and discovers the first clear evidence of The Darkness. The mission can resolve diplomatically or by force, then escalates into defence of Colony 2784 and investigation of The Cave, a Darkness stronghold."
@@ -957,8 +957,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "Wormhole Wandering",
     strap: "LD02 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/wormhole-wandering.png",
     recap: [{
       title: "Mission Synopsis",
       body: "The crew investigates a wormhole guarded by TSN forces, travels through it, and finds the lost TSN Defiance and ALF. On the far side, they scan Darkness caves for control codes before escaping through a second wormhole."
@@ -1015,8 +1015,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "The Bargain",
     strap: "LD03 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/the-bargain.png",
     recap: [{
       title: "Mission Synopsis",
       body: "A routine patrol is interrupted by ALF, who offers Darkness intelligence in exchange for help transferring into a TSN vessel. The crew negotiates with TSN, CUF, ITG, and potentially SAS/Gigantus to gather beryllium cores and complete the transfer."
@@ -1073,8 +1073,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "The Last Aegis",
     strap: "LD04 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/the-last-aegis.png",
     recap: [{
       title: "Mission Synopsis",
       body: "The crew investigates an ancient Light artefact under Umbra control, triggering a wormhole jump to the abandoned Aegis. They defend the station against waves of Darkness attacks and determine whether the Aegis survives."
@@ -1131,8 +1131,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "Shadowfall",
     strap: "LD05 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/shadowfall.png",
     recap: [{
       title: "Mission Synopsis",
       body: "The Darkness launches a sector-wide assault, forcing the crew to decide which allies and installations to save before the final attack on UFN Stallion. The mission ends with either a warp-core disruption or self-destruct style sacrifice to stop Shadowfall."
@@ -1213,8 +1213,8 @@ export const missions = [
     campaign: "Light and Dark Campaign",
     name: "Out Of The Light",
     strap: "LD06 · Light and Dark Campaign",
-    status: "GM notes loaded · art pending",
-    artwork: null,
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/out-of-the-light.png",
     recap: [{
       title: "Mission Synopsis",
       body: "After Shadowfall, the crew takes the fight through a wormhole into Darkness space to find and destroy The Heart. Outer Darkness control bases can be attacked to weaken the route to the final target."
