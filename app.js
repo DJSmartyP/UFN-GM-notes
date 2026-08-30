@@ -1,4 +1,4 @@
-import { missions } from "./data/missions.js?v=3";
+import { missions } from "./data/missions.js?v=4";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");

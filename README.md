@@ -56,3 +56,7 @@ Upload the contents of this folder to a GitHub repository and enable GitHub Page
 
 ## Update fix
 Build `recaps-v3` uses a network-first service worker for HTML/JS/CSS/mission data and a versioned mission-data import. This prevents an older installed/PWA copy from silently continuing to use stale recap data after deployment.
+
+
+## v4 correction
+- Corrected Operation: Common Ground recap to the canonical cargo-recovery / double-theft story involving Private Grifter, Ghost-stolen UMBRA freighters, stolen UFN/TSN technology, and Fleet Command authorising salvage and action against UMBRA.

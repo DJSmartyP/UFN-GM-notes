@@ -1,4 +1,4 @@
-const CACHE = "ufn-gm-shell-v3";
+const CACHE = "ufn-gm-shell-v4";
 const SHELL = [
   "./",
   "./index.html",
