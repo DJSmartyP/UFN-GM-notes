@@ -90,3 +90,11 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Wired all icon assets into `manifest.webmanifest` and `index.html`.
 - Updated installed app short name to `UFN GM DB`.
 - Cache version bumped to v13 so installed PWAs pick up the new icon metadata.
+
+
+## v14 - Wargames mission section
+
+- Added top-level WARGAMES section to the mission list.
+- Added WG01 / The First Wargames with approved synopsis, GM note, shared player mechanics, End Wargames before Final Battle, and no mission DB pages.
+- Added The First Wargames mission thumbnail artwork with green opposing-force ships.
+- Cache version bumped to v14.

@@ -1,5 +1,5 @@
-import { missions } from "./data/missions.js?v=13";
-import { customDbPages } from "./data/db-pages.js?v=13";
+import { missions } from "./data/missions.js?v=14";
+import { customDbPages } from "./data/db-pages.js?v=14";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");
@@ -63,7 +63,7 @@ function renderHome() {
 
   const groupsRoot = document.querySelector("#missionGroups");
   const template = document.querySelector("#mission-card-template");
-  const groupOrder = ["UFN Operations", "Light and Dark Campaign"];
+  const groupOrder = ["UFN Operations", "Light and Dark Campaign", "WARGAMES"];
 
   groupOrder.forEach(groupName => {
     const groupMissions = missions.filter(mission => mission.campaign === groupName);
