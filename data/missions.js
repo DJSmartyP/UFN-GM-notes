@@ -707,5 +707,87 @@ export const missions = [
       }
 ], 
     dbEntries: []
+  },
+  {
+    id: "the-first-wargames",
+    code: "WG01",
+    campaign: "WARGAMES",
+    name: "The First Wargames",
+    strap: "WG01 · WARGAMES",
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/the-first-wargames.png",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "UFN Celeste and GST Darkwater take opposing sides in a large-scale fleet training exercise. The two player ships operate in a busy battlespace containing UFN, Ghost, TSN, Umbra and ITG stations and forces, with both crews having access to the same core ship functions and the option to receive specialist upgrades during play.\n\nThe exercise does not remain a simulation. Once the wargame phase is ended, both player ships are restored to full combat readiness, returned to UFN control and the opposing exercise forces withdraw. A real Darkness assault then arrives through multiple wormholes around the UFN Training Centre, forcing Celeste and Darkwater to stop fighting each other and defend the station together."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "This is a two-ship opposing-force wargame built around UFN Celeste and GST Darkwater. During the exercise, both ships use the same baseline ship systems and can each receive up to two specialist upgrades. Relay can directly contact the opposing player ship. When the wargame ends, both ships are fully restored and the exercise forces withdraw. The mission then transitions into a real combat finale, with 15 Darkness ships arriving in five three-ship groups through wormholes around the UFN Training Centre."
+    }],
+    playerMechanics: [
+      {
+            "id": "both-ships-have",
+            "name": "Both Ships Have",
+            "station": "Celeste / Darkwater",
+            "description": "UFN Celeste and GST Darkwater share the same mission-specific player mechanics during the wargame: direct opposing-ship contact, specialist upgrade packages, enhanced drive and manoeuvre, expanded weapons stores, an auxiliary beam turret, and a rapid support fleet beacon."
+      },
+      {
+            "id": "contact-opposing-ship",
+            "name": "Contact Opposing Ship",
+            "station": "Relay",
+            "description": "Relay can directly open communications with the opposing player ship. Celeste sees `Contact OPFOR` and Darkwater sees `Contact BLUFOR`. This creates a direct text-comms channel between the two player vessels."
+      },
+      {
+            "id": "specialist-upgrade-packages",
+            "name": "Specialist Upgrade Packages",
+            "station": "Engineering / GM assigned",
+            "description": "Each ship can receive up to two specialist upgrade packages during the wargame. Engineering is informed when an upgrade is installed."
+      },
+      {
+            "id": "enhanced-drive-manoeuvre",
+            "name": "Enhanced Drive and Manoeuvre Package",
+            "station": "Engineering",
+            "description": "Improves impulse speed, acceleration and turning performance."
+      },
+      {
+            "id": "expanded-weapons-stores",
+            "name": "Expanded Weapons Stores Package",
+            "station": "Engineering / Weapons",
+            "description": "Increases missile storage and refills the racks. Upgraded capacity becomes 24 HVLI, 16 EMP, 20 Homing missiles and 12 Mines."
+      },
+      {
+            "id": "auxiliary-beam-turret",
+            "name": "Auxiliary Beam Turret Package",
+            "station": "Weapons",
+            "description": "Adds an extra short-range turreted beam weapon."
+      },
+      {
+            "id": "rapid-support-fleet-beacon",
+            "name": "Rapid Support Fleet Beacon",
+            "station": "Relay",
+            "description": "Adds a one-use `Support` button to Relay. Using it calls in a four-ship support element near the player ship. Once the support force has arrived, Relay gains `Attack` and `Defend` controls to direct it. Celeste receives TSN support. Darkwater receives Ghost support."
+      },
+      {
+            "id": "end-wargames",
+            "name": "End Wargames",
+            "station": "GM phase note",
+            "description": "UFN Training Centre is restored. Celeste and Darkwater are fully repaired and re-energised. Both ships return to UFN / Human Navy alignment. Any selected upgrades remain active. Ghost and Umbra CPU ships are ordered to withdraw. Relay receives: `Simulation ended. Full battle systems restored.`"
+      },
+      {
+            "id": "final-battle",
+            "name": "Final Battle",
+            "station": "GM phase note",
+            "description": "A real Darkness attack begins after the exercise ends. Five Darkness groups arrive through wormholes around the UFN Training Centre. Each group contains three ships, for a total of 15 attackers. Groups 1 and 3 target Celeste. Groups 2 and 4 target Darkwater. Group 5 targets the UFN Training Centre."
+      },
+      {
+            "id": "optional-gm-reference",
+            "name": "Optional GM Reference Note",
+            "station": "GM reference",
+            "description": "Both ships use matched baseline combat capability for the exercise. They start with the same broad weapons setup and stores, including nuclear weapons being enabled for the scenario. The major differentiator during the wargame is which two specialist upgrades each ship receives."
+      }
+], 
+    dbEntries: []
   }
 ];
