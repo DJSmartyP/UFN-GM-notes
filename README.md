@@ -17,6 +17,7 @@ Phone-first GM companion for UFN / EmptyEpsilon missions.
 - OP10 — Operation: Patchwork
 - OP11 — Operation: Resonance
 - OP12 — Operation: Continuum
+- OP13 — Operation: Columbo
 
 ### Light and Dark Campaign
 - LD01 — Into The Darkness
@@ -98,3 +99,12 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Added WG01 / The First Wargames with approved synopsis, GM note, shared player mechanics, End Wargames before Final Battle, and no mission DB pages.
 - Added The First Wargames mission thumbnail artwork with green opposing-force ships.
 - Cache version bumped to v14.
+
+
+## v15 - Operation: Columbo
+
+- Added OP13 / Operation: Columbo to UFN Operations.
+- Added the GM synopsis, Ghost trail, ALF investigation support, Relay hacking mechanics, counter-rotating Intelligence Relay minefield and final Porter capture phase.
+- Added six investigation database pages covering the orders, FC arrest, recovered Ghost transmission, UFN communications protocol, authentication registry and Commodore Chris Porter.
+- Added the approved Operation: Columbo mission artwork.
+- Cache version bumped to v15.
