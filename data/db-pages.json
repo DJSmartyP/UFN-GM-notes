@@ -544,5 +544,55 @@
       "group": "CURRENT LOGS - RESTORED 2247",
       "body": "SOURCE: UFN after-action archive, filed 2231\nFiled: 2231\nFinal Status: TWIN PINES SECURE\n\nBATTLE FOR TWIN PINES\nAFTER-ACTION REPORT\n\nFiled: 2231\nLocation: Twin Pines\nOperation Status: COMPLETE\nStation Status: OPERATIONAL\nClassification: UFN INTERNAL\n\nUmbra forces entered the Twin Pines region in strength and initiated a coordinated assault against the station and surrounding UFN positions.\n\nFleet Command committed substantial reinforcements and UFN forces established overwhelming numerical superiority.\n\nDuring the engagement, Twin Pines detected an unauthorised attempt to access its command network.\n\nThe intrusion targeted station shields, defensive weapons and fleet-support communications.\n\nNetwork traces contained the identifier AXIS. No corresponding organisation, faction, vessel class or registry could be located in Fleet records.\n\nAn unidentified vessel entered the engagement broadcasting authenticated UFN identification signals.\n\nNo corresponding vessel, registry or class could be located in Fleet records. Sensor analysis indicated systems and capabilities significantly beyond those employed by known UFN vessels.\n\nThe unidentified vessel transmitted an adaptive defensive package which successfully blocked the intrusion before station systems could be compromised.\n\nThe unidentified vessel departed while the wider engagement remained active.\n\nWith Twin Pines remaining operational, UFN forces maintained coordination and continued to press the Umbra offensive.\n\nRemaining Umbra vessels subsequently withdrew.\n\nIts origin remains unknown.\n\nFleet Intelligence considers several possibilities, including an unregistered classified vessel or contact with an advanced friendly civilisation possessing access to UFN identification protocols.\n\nTECHNICAL NOTE\n\nFragments of the adaptive defensive package remain within Twin Pines' systems.\n\nInitial analysis indicates computational methods significantly beyond contemporary UFN capabilities.\n\nCopies have been secured for further examination and shared with TSN technical specialists.\n\nASSESSMENT:\nUmbra attempt to establish control of Twin Pines defeated. Investigation into the unidentified vessel, AXIS intrusion and recovered code remains ongoing.\n\nFINAL STATUS:\nTWIN PINES SECURE"
     }
+  ],
+  "columbo": [
+    {
+      "id": "mission-orders",
+      "title": "Operation Columbo — Convoy Orders",
+      "database": "MISSION / OPERATION COLUMBO",
+      "trigger": "Mission start",
+      "group": "MISSION / OPERATION COLUMBO",
+      "body": "UNITED FEDERATED NAVY\nCLASSIFIED OPERATIONAL ORDERS\n\nOperation: COLUMBO\nThe assigned vessel will escort three high-security cargo ships through Ghost Space. Route, departure time and escort pattern are restricted to Captains and above.\n\nThe escort vessel will temporarily detach at the designated readiness area to complete a standard combat-readiness test before rejoining the convoy.\n\nAuthorised operational copy issued to: Flight Controller\nAuthentication: CMD-4F-219\n\nDo not transmit or reproduce outside authorised command channels."
+    },
+    {
+      "id": "investigation-brief",
+      "title": "Convoy Loss — Investigation Brief",
+      "database": "INVESTIGATION",
+      "trigger": "After FC arrest",
+      "group": "INVESTIGATION",
+      "body": "UFN INTELLIGENCE — PRELIMINARY CASE SUMMARY\n\nThe classified convoy was destroyed during the precise interval in which its escort had been ordered away for a combat-readiness test. The attacker knew the convoy route, timing and escort absence window.\n\nThe Flight Controller was the only officer officially issued the operational copy and has been taken into custody pending investigation.\n\nRequired evidence:\n• Source of the leaked transmission\n• Authentication used to authorise it\n• Identity of the certificate holder"
+    },
+    {
+      "id": "recovered-ghost-transmission",
+      "title": "Recovered UFN Transmission",
+      "database": "RECOVERED TRANSMISSIONS",
+      "trigger": "Ghost base hack complete",
+      "group": "RECOVERED TRANSMISSIONS",
+      "body": "RECOVERED FROM: GHOST COMMAND / INTELLIGENCE SYSTEM\nORIGIN: UFN command network\n\nTARGET: Operation Columbo convoy\nROUTE: Confirmed classified transit corridor\nATTACK WINDOW: During scheduled escort combat-readiness test\nESCORT STATUS: Player vessel detached from convoy\n\nAUTHENTICATION: CMD-7A-441\n\nFORENSIC NOTE:\nThe transmission carries valid UFN command authentication, but the certificate does not match the Flight Controller's issued code CMD-4F-219."
+    },
+    {
+      "id": "ufn-command-protocol",
+      "title": "UFN Command Communications Protocol",
+      "database": "UFN COMMS PROTOCOL",
+      "trigger": "UFN Intelligence Relay hack complete",
+      "group": "UFN COMMS PROTOCOL",
+      "body": "UFN COMMAND COMMUNICATIONS PROTOCOL\nRESTRICTED — CAPTAINS AND ABOVE\n\nLieutenant Commander and below — Standard Vessel Authentication\nCaptain — Command Authentication Class C\nCommodore — Flag Authentication Class F\nRear Admiral and above — Strategic Authentication Class S\n\nIndividual authentication certificates are centrally assigned, auditable and non-transferable. A valid certificate identifies the officer who authorised a command transmission; it is not inherited from the terminal or vessel used to send it."
+    },
+    {
+      "id": "authentication-registry",
+      "title": "Senior Officer Authentication Registry",
+      "database": "AUTHENTICATION REGISTRY",
+      "trigger": "UFN Intelligence Relay hack complete",
+      "group": "AUTHENTICATION REGISTRY",
+      "body": "UFN SENIOR OFFICER AUTHENTICATION REGISTRY\n\nCMD-4F-219 — Flight Controller — Captain\nCMD-2C-814 — Captain Elena Voss — Captain\nCMD-7A-441 — Chris Porter — Commodore\n\nREGISTRY RESULT:\nThe authentication attached to the recovered Ghost transmission, CMD-7A-441, is assigned to Commodore Chris Porter."
+    },
+    {
+      "id": "chris-porter",
+      "title": "Commodore Chris Porter",
+      "database": "PERSONNEL / CHRIS PORTER",
+      "trigger": "UFN Intelligence Relay hack complete",
+      "group": "PERSONNEL / CHRIS PORTER",
+      "body": "UFN PERSONNEL RECORD\n\nNAME: Chris Porter\nRANK: Commodore\nAUTHENTICATION: CMD-7A-441\nSTATUS: Locate and detain\n\nPREVIOUS ASSIGNMENT:\nGhost Sector Operations, including intelligence liaison and command responsibility for covert activity within Ghost Space.\n\nASSESSMENT:\nPorter possessed both the command access required to obtain Operation Columbo's restricted convoy data and the historical Ghost-space contacts needed to pass it to hostile forces. The recovered authentication evidence clears the Flight Controller and identifies Porter as the source of the leak."
+    }
   ]
 }

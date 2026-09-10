@@ -483,6 +483,58 @@ export const missions = [
     dbEntries: []
   },
   {
+    id: "columbo",
+    code: "OP13",
+    campaign: "UFN Operations",
+    name: "Operation: Columbo",
+    strap: "OP13 · UFN Operation",
+    status: "GM notes loaded · art loaded",
+    artwork: "assets/missions/columbo.png",
+    recap: [{
+      title: "Mission Synopsis",
+      body: "The crew escorts a classified UFN convoy through Ghost Space, but is sent away for a routine combat-readiness test. While they are absent, the convoy is destroyed and their Flight Controller is arrested for leaking its route and timing. With discreet help from ALF, the crew follows a fleeing Ghost command ship, hacks a Ghost intelligence base, compares authentication evidence, and traces the leak to Commodore Chris Porter. Once their FC is cleared, the crew must locate and capture Porter before he escapes under Ghost protection."
+    }],
+    mechanisms: [{
+      id: "gm-note",
+      kind: "note",
+      label: "Special mechanics / GM note",
+      description: "This is an investigation-led mission set entirely in Ghost Space. Protect the fleeing Ghost command ship until it leads the crew to the Ghost base; it should flee just beyond sensor range, wait, then lead at a followable speed. Relay hacks the Ghost base to recover the leaked transmission, then performs a 30-second continuous proximity hack at a UFN Intelligence Relay protected by two counter-rotating rings of real mines. Leaving range resets the hack. ALF may prompt or explain clues but must not solve the case. Protect the Ghost base, UFN relay and Porter's ship until their story functions are complete."
+    }],
+    playerMechanics: [
+      {
+        id: "ghost-base-comms-forensics",
+        name: "Search UFN Transmissions",
+        station: "Relay",
+        description: "When close enough to the Ghost command base, Relay searches its systems for UFN-originated traffic. A successful hack unlocks the recovered transmission showing the convoy route, escort absence window and the unknown authentication code CMD-7A-441."
+      },
+      {
+        id: "intelligence-relay-hack",
+        name: "Hack Intelligence Relay",
+        station: "Relay",
+        description: "Relay begins an unauthorised 30-second hack while the ship is within range of the UFN Communications / Intelligence Relay. The connection must remain continuous; leaving range interrupts the attempt and resets progress."
+      },
+      {
+        id: "intelligence-relay-progress",
+        name: "Intelligence Hack Progress",
+        station: "Relay",
+        description: "Relay sees the live connection and progress state for the sustained Intelligence Relay hack. Completion unlocks the UFN command protocol, authentication registry and Chris Porter personnel evidence."
+      },
+      {
+        id: "rotating-minefield",
+        name: "Rotating Security Minefield",
+        station: "Helm / Relay",
+        description: "The UFN Intelligence Relay is surrounded by two counter-rotating rings of genuine mines. Destroyed mines leave permanent moving gaps; the crew must manoeuvre through or create a safe route and hold hacking range while both rings continue rotating."
+      },
+      {
+        id: "alf-investigation-support",
+        name: "ALF Investigation Support",
+        station: "Relay / Database",
+        description: "After the FC is arrested, ALF appears discreetly to suggest investigative actions, explain technical evidence and provide failsafe guidance. ALF never names the culprit before the crew obtains the authentication registry."
+      }
+    ],
+    dbEntries: []
+  },
+  {
     id: "into-the-darkness",
     code: "LD01",
     campaign: "Light and Dark Campaign",
