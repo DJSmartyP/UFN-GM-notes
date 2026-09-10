@@ -490,46 +490,68 @@ export const missions = [
     strap: "OP13 · UFN Operation",
     status: "GM notes loaded · art loaded",
     artwork: "assets/missions/columbo.png",
-    recap: [{
-      title: "Mission Synopsis",
-      body: "The crew escorts a classified UFN convoy through Ghost Space, but is sent away for a routine combat-readiness test. While they are absent, the convoy is destroyed and their Flight Controller is arrested for leaking its route and timing. With discreet help from ALF, the crew follows a fleeing Ghost command ship, hacks a Ghost intelligence base, compares authentication evidence, and traces the leak to Commodore Chris Porter. Once their FC is cleared, the crew must locate and capture Porter before he escapes under Ghost protection."
-    }],
-    mechanisms: [{
-      id: "gm-note",
-      kind: "note",
-      label: "Special mechanics / GM note",
-      description: "This is an investigation-led mission set entirely in Ghost Space. Protect the fleeing Ghost command ship until it leads the crew to the Ghost base; it should flee just beyond sensor range, wait, then lead at a followable speed. Relay hacks the Ghost base to recover the leaked transmission, then performs a 30-second continuous proximity hack at a UFN Intelligence Relay protected by two counter-rotating rings of real mines. Leaving range resets the hack. ALF may prompt or explain clues but must not solve the case. Protect the Ghost base, UFN relay and Porter's ship until their story functions are complete."
-    }],
+    recap: [
+      {
+        title: "Mission Synopsis",
+        body: "Vanguard is assigned to escort Convoy C-19 through contested Ghost Space under unusually strict security. The convoy's route, timing and navigation checkpoints are restricted to senior officers and recorded in an operational briefing authenticated with the Flight Controller's personal key. Before the escort can be completed, two freighters are lost. The third is left battered, evacuated and stripped at the ambush site. Because the attackers possessed the classified orders and the known copy bears the FC's authentication, the FC is arrested and command of the mission is transferred.\n\nALF believes the case is too convenient and quietly gives the crew the tools to investigate. A tracking device is fired into GST Black Flag Control before the Ghost ship escapes, leaving a trail of telemetry contacts to GST Hackers Conclave. Relay's Data Miner searches the Conclave and recovers a leaked copy of the convoy orders. The document is identical to the crew's briefing except for one crucial detail: it was authenticated with CMD-7A-441, not the FC's CMD-4F-219.\n\nThe crew must then covertly search UFN Intel Comms Relay while navigating its moving two-ring minefield. The recovered authentication register shows that CMD-4F-219 belongs to Commodore “Smarty” Smith-Patel, Head of Flight Operations, while CMD-7A-441 belongs to Commodore Chris Kinsey of Ghost Sector Operations. The match clears the FC and identifies Kinsey as the officer who authorised the leaked material.\n\nALF installs a direction finder on Science to trace Kinsey's active command transmitter. Four bearings taken from separated positions locate UFN Trust in sector B12 and reveal its Ghost escort inside the surrounding nebulae. The final encounter may end with Kinsey killed in combat, escaping at extreme warp, being deliberately allowed to withdraw, or being arrested after Trust is disabled and a UFN detention force arrives. The GM ends the mission manually and may return the cleared FC for the debrief."
+      }
+    ],
+    mechanisms: [
+      {
+        id: "convoy-event-command-transfer",
+        kind: "note",
+        label: "Convoy Event and Command Transfer",
+        description: "Convoy Event immediately removes UFN Convoy Freighters A and B while leaving Freighter C at the ambush site with 18% hull, no shields and disabled systems. Its scan shows that the crew evacuated before the ship was boarded and stripped. Ten seconds after the scene changes, the FC is removed, Call FC becomes unavailable and the ship log reports FLIGHT CONTROL: COMMAND CONTROL CHANGING - STANDBY. Ten seconds later it reports FLIGHT CONTROL: COMMAND TRANSFERRED - NEW FC ASSIGNED. Supply the arrest explanation and replacement FC dialogue manually; there is no separate arrest database page."
+      },
+      {
+        id: "tag-black-flag",
+        kind: "note",
+        label: "Tag Black Flag",
+        description: "Tag Black Flag fires an ALF tracking device disguised as a supply pod at GST Black Flag Control. Black Flag remains idle until the device strikes, then follows a fast curved route toward GST Hackers Conclave at warp 2 with maximum configured impulse speed. Cyan telemetry contacts appear behind the ship only after it passes each point, spaced 3U apart. The contacts disappear when Vanguard comes within 5U of the Conclave. Black Flag is targetable but its hull is continuously protected until arrival; at the base it returns to normal combat vulnerability."
+      },
+      {
+        id: "camouflage-menu",
+        kind: "note",
+        label: "Camouflage",
+        description: "CAMOUFLAGE > is a GM-only menu available from mission start. It can set Vanguard to UFN, Ghost, Umbra or AXIS identity by changing both faction and call-sign prefix: UFN Vanguard, GST Vanguard, UMB Vanguard or AXIS Vanguard. Relay cannot control camouflage. The UFN intelligence minefield does not change faction with camouflage and remains Human Navy throughout."
+      },
+      {
+        id: "station-data-miner",
+        kind: "note",
+        label: "Station Data Miner",
+        description: "Data Miner installs SEARCH STATION DATA on Relay and AltRelay and adds the operating instructions to MISSION INTEL. The panel detects recognised stations within 5U, but Vanguard must be within 3U to begin and remain there. Every attempt runs a 20-second search. UFN Metro returns no mission data. The first successful search of GST Hackers Conclave or UFN Intel Comms Relay continues into a 10-second download and adds that source's page. Exhausted sources report no new materials. Leaving 3U cancels the operation and resets all progress."
+      },
+      {
+        id: "ufn-intel-relay-minefield",
+        kind: "note",
+        label: "UFN Intel Relay and Minefield",
+        description: "The intelligence station exists from mission start as the neutral Unmarked Installation, allowing the GM to see its location while keeping its identity hidden from the crew. Reveal UNFI Base renames it UFN Intel Comms Relay, changes it to Human Navy and creates twenty real UFN mines in two counter-rotating rings. The inner ring has eight mines at 3.6U and rotates at 0.12 radians per second. The outer has twelve mines at 6.2U, begins 15 degrees offset and rotates at -0.07. Destroyed mines leave moving gaps and do not respawn. The mines remain Human Navy under every camouflage setting."
+      },
+      {
+        id: "authentication-direction-finder-gm",
+        kind: "note",
+        label: "Authentication Direction Finder",
+        description: "After the crew extracts the UFN Authentication Codes, use Science Finder to install ALF's direction finder and its MISSION INTEL instructions. Science must centre and lock four varied headings, moving Vanguard at least 15U between recorded positions. The arrows always indicate the shortest rotation and the six-segment alignment bar uses *. The fourth bearing identifies B12, adds the trace result and spawns UFN Trust with three Ghost Hunters and two Ghost Daggers. The B12 nebulae are present from mission start; the ships do not exist until the trace completes."
+      },
+      {
+        id: "kinsey-final-encounter",
+        kind: "note",
+        label: "Kinsey Final Encounter",
+        description: "UFN Trust is a Human Navy Hostile Atlantis with no jump drive and 15% reinforced hull and shields. Trust and its five Ghost escorts attack automatically when Vanguard comes within 20U, and every final ship can be destroyed. If Trust is destroyed first, the remaining Ghost ships continue fighting. If the Ghost escort is eliminated while Trust survives, Trust stops for Kinsey's plea. KINSEY ENDING > then offers Escape, Let Go and Arrest: Escape uses rapid turning and warp 8, Let Go withdraws at warp 4, and Arrest disables Trust and sends three UFN Atlantis ships plus a prisoner transport. Destruction of Trust is the fourth valid outcome. End the mission manually."
+      }
+    ],
     playerMechanics: [
       {
-        id: "ghost-base-comms-forensics",
-        name: "Search UFN Transmissions",
-        station: "Relay",
-        description: "When close enough to the Ghost command base, Relay searches its systems for UFN-originated traffic. A successful hack unlocks the recovered transmission showing the convoy route, escort absence window and the unknown authentication code CMD-7A-441."
+        id: "data-miner",
+        name: "Data Miner",
+        station: "Relay / AltRelay",
+        description: "ALF has added the ability to search nearby station systems for documents related to the current mission.\n\nThe data miner detects mission-relevant stations within 5U. Move Vanguard within 3U of a detected station, then select SEARCH STATION DATA on Relay to begin a 20-second search. If the search locates a new mission document, a separate 10-second download will begin. Searches with no available data finish without entering the download phase. Vanguard must remain within 3U throughout either operation; leaving range cancels it and resets its progress.\n\nAny relevant documents recovered by the search will be added to Mission Intel. Stations with no relevant records will return no mission-related documents. If a station's available records have already been recovered, the search will report that no new materials are available."
       },
       {
-        id: "intelligence-relay-hack",
-        name: "Hack Intelligence Relay",
-        station: "Relay",
-        description: "Relay begins an unauthorised 30-second hack while the ship is within range of the UFN Communications / Intelligence Relay. The connection must remain continuous; leaving range interrupts the attempt and resets progress."
-      },
-      {
-        id: "intelligence-relay-progress",
-        name: "Intelligence Hack Progress",
-        station: "Relay",
-        description: "Relay sees the live connection and progress state for the sustained Intelligence Relay hack. Completion unlocks the UFN command protocol, authentication registry and Chris Porter personnel evidence."
-      },
-      {
-        id: "rotating-minefield",
-        name: "Rotating Security Minefield",
-        station: "Helm / Relay",
-        description: "The UFN Intelligence Relay is surrounded by two counter-rotating rings of genuine mines. Destroyed mines leave permanent moving gaps; the crew must manoeuvre through or create a safe route and hold hacking range while both rings continue rotating."
-      },
-      {
-        id: "alf-investigation-support",
-        name: "ALF Investigation Support",
-        station: "Relay / Database",
-        description: "After the FC is arrested, ALF appears discreetly to suggest investigative actions, explain technical evidence and provide failsafe guidance. ALF never names the culprit before the crew obtains the authentication registry."
+        id: "authentication-direction-finder",
+        name: "Authentication Direction Finder",
+        station: "Science",
+        description: "ALF has configured Science to trace the command transmitter using authentication key CMD-7A-441. The receiver determines direction only. Four bearings taken from different locations are required to calculate the source sector. Each sweep isolates a different reflected signal path, so a fresh alignment heading will be required for every bearing.\n\n1. On Science, watch the AUTH TRACE alignment display.\n\n2. Ask Helm to rotate Vanguard in the direction shown by the arrows. >>> means turn starboard. <<< means turn port. The display always indicates the shortest turn to the signal.\n\n3. When the display reads CENTRED, select LOCK FIRST BEARING.\n\n4. Move Vanguard at least 15U away from the position where the bearing was recorded. Science will display the current baseline distance.\n\n5. Repeat the alignment and movement process for the second and third bearings.\n\n6. Align for the fourth sweep and select LOCK FINAL BEARING. All four readings will be combined and the source sector will be displayed on Science and added to Mission Intel.\n\nThe alignment button is only available while the signal is centred. Moving during a directional sweep is permitted, but a steady heading will make the bearing easier to lock."
       }
     ],
     dbEntries: []

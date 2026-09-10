@@ -547,52 +547,52 @@
   ],
   "columbo": [
     {
-      "id": "mission-orders",
-      "title": "Operation Columbo — Convoy Orders",
-      "database": "MISSION / OPERATION COLUMBO",
+      "id": "operation-columbo-briefing",
+      "title": "Operation Columbo Briefing",
+      "database": "MISSION INTEL",
       "trigger": "Mission start",
-      "group": "MISSION / OPERATION COLUMBO",
-      "body": "UNITED FEDERATED NAVY\nCLASSIFIED OPERATIONAL ORDERS\n\nOperation: COLUMBO\nThe assigned vessel will escort three high-security cargo ships through Ghost Space. Route, departure time and escort pattern are restricted to Captains and above.\n\nThe escort vessel will temporarily detach at the designated readiness area to complete a standard combat-readiness test before rejoining the convoy.\n\nAuthorised operational copy issued to: Flight Controller\nAuthentication: CMD-4F-219\n\nDo not transmit or reproduce outside authorised command channels."
+      "group": "MISSION INTEL",
+      "body": "CLASSIFICATION: TOP SECRET - SENIOR OFFICERS AND ACTIVE CREW ONLY\nOFFICER'S AUTHENTICATION KEY: CMD-4F-219\n\nUFN Vanguard is assigned as sole escort to Convoy C-19, consisting of UFN Convoy Freighters A, B, and C. Vanguard will protect the convoy throughout its passage along the authorised Ghost Space transit corridor.\n\nThe convoy will assemble in the designated convoy assembly sector and hold there until Vanguard confirms readiness. On clearance from Flight Control, the convoy will proceed along the classified transit route supplied with these orders.\n\nThe convoy is scheduled to depart at mission time T+00, pass the first navigation checkpoint at T+18 minutes, and cross the final route boundary at T+35 minutes. Vanguard will remain assigned as sole escort until the convoy is formally relieved.\n\nThe convoy route, departure time, navigation checkpoints, and projected arrival time are classified. They must not be transmitted outside authorised UFN command channels."
     },
     {
-      "id": "investigation-brief",
-      "title": "Convoy Loss — Investigation Brief",
-      "database": "INVESTIGATION",
-      "trigger": "After FC arrest",
-      "group": "INVESTIGATION",
-      "body": "UFN INTELLIGENCE — PRELIMINARY CASE SUMMARY\n\nThe classified convoy was destroyed during the precise interval in which its escort had been ordered away for a combat-readiness test. The attacker knew the convoy route, timing and escort absence window.\n\nThe Flight Controller was the only officer officially issued the operational copy and has been taken into custody pending investigation.\n\nRequired evidence:\n• Source of the leaked transmission\n• Authentication used to authorise it\n• Identity of the certificate holder"
+      "id": "alf-data-miner",
+      "title": "ALF Data Miner",
+      "database": "MISSION INTEL",
+      "trigger": "GM installs Data Miner",
+      "group": "MISSION INTEL",
+      "body": "ALF has added the ability to search nearby station systems for documents related to the current mission.\n\nThe data miner detects mission-relevant stations within 5U. Move Vanguard within 3U of a detected station, then select SEARCH STATION DATA on Relay to begin a 20-second search. If the search locates a new mission document, a separate 10-second download will begin. Searches with no available data finish without entering the download phase. Vanguard must remain within 3U throughout either operation; leaving range cancels it and resets its progress.\n\nAny relevant documents recovered by the search will be added to Mission Intel. Stations with no relevant records will return no mission-related documents. If a station's available records have already been recovered, the search will report that no new materials are available."
     },
     {
-      "id": "recovered-ghost-transmission",
-      "title": "Recovered UFN Transmission",
-      "database": "RECOVERED TRANSMISSIONS",
-      "trigger": "Ghost base hack complete",
-      "group": "RECOVERED TRANSMISSIONS",
-      "body": "RECOVERED FROM: GHOST COMMAND / INTELLIGENCE SYSTEM\nORIGIN: UFN command network\n\nTARGET: Operation Columbo convoy\nROUTE: Confirmed classified transit corridor\nATTACK WINDOW: During scheduled escort combat-readiness test\nESCORT STATUS: Player vessel detached from convoy\n\nAUTHENTICATION: CMD-7A-441\n\nFORENSIC NOTE:\nThe transmission carries valid UFN command authentication, but the certificate does not match the Flight Controller's issued code CMD-4F-219."
+      "id": "recovered-leaked-comms",
+      "title": "Recovered Leaked Comms",
+      "database": "MISSION INTEL",
+      "trigger": "First completed Data Miner download from GST Hackers Conclave",
+      "group": "MISSION INTEL",
+      "body": "CLASSIFICATION: TOP SECRET - SENIOR OFFICERS AND ACTIVE CREW ONLY\nOFFICER'S AUTHENTICATION KEY: CMD-7A-441\n\nUFN Vanguard is assigned as sole escort to Convoy C-19, consisting of UFN Convoy Freighters A, B, and C. Vanguard will protect the convoy throughout its passage along the authorised Ghost Space transit corridor.\n\nThe convoy will assemble in the designated convoy assembly sector and hold there until Vanguard confirms readiness. On clearance from Flight Control, the convoy will proceed along the classified transit route supplied with these orders.\n\nThe convoy is scheduled to depart at mission time T+00, pass the first navigation checkpoint at T+18 minutes, and cross the final route boundary at T+35 minutes. Vanguard will remain assigned as sole escort until the convoy is formally relieved.\n\nThe convoy route, departure time, navigation checkpoints, and projected arrival time are classified. They must not be transmitted outside authorised UFN command channels."
     },
     {
-      "id": "ufn-command-protocol",
-      "title": "UFN Command Communications Protocol",
-      "database": "UFN COMMS PROTOCOL",
-      "trigger": "UFN Intelligence Relay hack complete",
-      "group": "UFN COMMS PROTOCOL",
-      "body": "UFN COMMAND COMMUNICATIONS PROTOCOL\nRESTRICTED — CAPTAINS AND ABOVE\n\nLieutenant Commander and below — Standard Vessel Authentication\nCaptain — Command Authentication Class C\nCommodore — Flag Authentication Class F\nRear Admiral and above — Strategic Authentication Class S\n\nIndividual authentication certificates are centrally assigned, auditable and non-transferable. A valid certificate identifies the officer who authorised a command transmission; it is not inherited from the terminal or vessel used to send it."
+      "id": "ufn-authentication-codes",
+      "title": "UFN Authentication Codes",
+      "database": "MISSION INTEL",
+      "trigger": "First completed Data Miner download from UFN Intel Comms Relay",
+      "group": "MISSION INTEL",
+      "body": "The following are the current top-level authentication keys assigned for use in this sector. Each authentication key is assigned to one active senior-officer service record. Records are listed by the date on which sector use was authorised.\n\n04 JAN | CMD-4F-201 | Commander Carl Jones | Automated Enforcement Systems Review Board\n19 JAN | CMD-1D-907 | Commodore Rowan Baltar | AXIS Collaboration Counterintelligence Office\n02 FEB | CMD-7A-442 | Captain Malcolm Burke | Colonial Specimen Containment Office\n21 FEB | CMD-9H-715 | Commander Mira Krycek | Extraterrestrial Contaminant Investigations\n08 MAR | CMD-5E-691 | Captain Gideon Tyrell | Synthetic Personnel Regulation Bureau\n27 MAR | CMD-7G-491 | Commodore Lucian Davros | Autonomous Extermination Systems Threat Unit\n11 APR | CMD-4F-218 | Commander Elena Khan | Genetic Augmentation Compliance Directorate\n29 APR | CMD-7A-441 | Commodore Chris Kinsey | Ghost Sector Operations\n16 MAY | CMD-8S-433 | Captain Tamsin Wallace | Off-World Labour Standards Directorate\n05 JUN | CMD-4F-129 | Commander Nathan Morden | Covert Influence and Coercion Review Office\n23 JUN | CMD-6V-550 | Captain Elias Cavil | Synthetic Infiltration Countermeasures Directorate\n09 JUL | CMD-2C-814 | Commander Marcus Simmons | Captured Technology Analysis Division\n28 JUL | CMD-3H-275 | Commodore Petra Weyland | Corporate Colonisation Oversight Authority\n14 AUG | CMD-6D-321 | Commander Helena Boddicker | Urban Piracy Suppression Unit\n31 AUG | CMD-7A-414 | Captain Adrian Dukat | Occupied Systems Recovery Command\n17 SEP | CMD-4F-209 | Commander Amelia Saxon | Temporal Continuity Security Office\n06 OCT | CMD-9K-103 | Captain Julian Bester | Cognitive Security and Personnel Screening Corps\n24 OCT | CMD-4F-289 | Captain Victor Cohaagen | Terraforming Safety and Atmosphere Control\n12 NOV | CMD-4F-219 | Commodore \"Smarty\" Smith-Patel | Head of Flight Operations\n30 NOV | CMD-7A-421 | Commander Tobias Spender | Anomalous Threat Assessment Bureau"
     },
     {
-      "id": "authentication-registry",
-      "title": "Senior Officer Authentication Registry",
-      "database": "AUTHENTICATION REGISTRY",
-      "trigger": "UFN Intelligence Relay hack complete",
-      "group": "AUTHENTICATION REGISTRY",
-      "body": "UFN SENIOR OFFICER AUTHENTICATION REGISTRY\n\nCMD-4F-219 — Flight Controller — Captain\nCMD-2C-814 — Captain Elena Voss — Captain\nCMD-7A-441 — Chris Porter — Commodore\n\nREGISTRY RESULT:\nThe authentication attached to the recovered Ghost transmission, CMD-7A-441, is assigned to Commodore Chris Porter."
+      "id": "alf-direction-finder",
+      "title": "ALF Direction Finder",
+      "database": "MISSION INTEL",
+      "trigger": "GM installs Science Finder after UFN authentication-code extraction",
+      "group": "MISSION INTEL",
+      "body": "ALF has configured Science to trace the command transmitter using authentication key CMD-7A-441. The receiver determines direction only. Four bearings taken from different locations are required to calculate the source sector. Each sweep isolates a different reflected signal path, so a fresh alignment heading will be required for every bearing.\n\n1. On Science, watch the AUTH TRACE alignment display.\n\n2. Ask Helm to rotate Vanguard in the direction shown by the arrows. >>> means turn starboard. <<< means turn port. The display always indicates the shortest turn to the signal.\n\n3. When the display reads CENTRED, select LOCK FIRST BEARING.\n\n4. Move Vanguard at least 15U away from the position where the bearing was recorded. Science will display the current baseline distance.\n\n5. Repeat the alignment and movement process for the second and third bearings.\n\n6. Align for the fourth sweep and select LOCK FINAL BEARING. All four readings will be combined and the source sector will be displayed on Science and added to Mission Intel.\n\nThe alignment button is only available while the signal is centred. Moving during a directional sweep is permitted, but a steady heading will make the bearing easier to lock."
     },
     {
-      "id": "chris-porter",
-      "title": "Commodore Chris Porter",
-      "database": "PERSONNEL / CHRIS PORTER",
-      "trigger": "UFN Intelligence Relay hack complete",
-      "group": "PERSONNEL / CHRIS PORTER",
-      "body": "UFN PERSONNEL RECORD\n\nNAME: Chris Porter\nRANK: Commodore\nAUTHENTICATION: CMD-7A-441\nSTATUS: Locate and detain\n\nPREVIOUS ASSIGNMENT:\nGhost Sector Operations, including intelligence liaison and command responsibility for covert activity within Ghost Space.\n\nASSESSMENT:\nPorter possessed both the command access required to obtain Operation Columbo's restricted convoy data and the historical Ghost-space contacts needed to pass it to hostile forces. The recovered authentication evidence clears the Flight Controller and identifies Porter as the source of the leak."
+      "id": "authentication-trace-result",
+      "title": "Authentication Trace Result",
+      "database": "MISSION INTEL",
+      "trigger": "Fourth Science bearing locked",
+      "group": "MISSION INTEL",
+      "body": "The directional authentication trace has isolated an active command transmitter using authentication key CMD-7A-441. The source is aboard UFN Trust, registered to Commodore Chris Kinsey. Its estimated location is sector B12."
     }
   ]
 }
