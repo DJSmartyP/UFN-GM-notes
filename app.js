@@ -1,5 +1,5 @@
-import { missions } from "./data/missions.js?v=15";
-import { customDbPages } from "./data/db-pages.js?v=15";
+import { missions } from "./data/missions.js?v=16";
+import { customDbPages } from "./data/db-pages.js?v=16";
 
 const app = document.querySelector("#app");
 const title = document.querySelector("#screenTitle");
@@ -152,7 +152,7 @@ function renderMission(mission) {
             <span class="station-chip">${escapeHtml(mech.station || "Crew")}</span>
           </div>
           <div class="player-mechanic-label">HOW THEY USE IT</div>
-          <p>${escapeHtml(mech.description || "")}</p>
+          <p>${escapeHtml(mech.description || "").replace(/\n/g, "<br>")}</p>
         </article>`).join("")}</div>`
     : `<div class="empty-state"><strong>No player mechanics loaded yet</strong>Player-facing mission mechanics can be added here as station-labelled tiles.</div>`;
 

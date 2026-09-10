@@ -101,10 +101,11 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Cache version bumped to v14.
 
 
-## v15 - Operation: Columbo
+## v16 - Corrected Operation: Columbo
 
-- Added OP13 / Operation: Columbo to UFN Operations.
-- Added the GM synopsis, Ghost trail, ALF investigation support, Relay hacking mechanics, counter-rotating Intelligence Relay minefield and final Porter capture phase.
-- Added six investigation database pages covering the orders, FC arrest, recovered Ghost transmission, UFN communications protocol, authentication registry and Commodore Chris Porter.
-- Added the approved Operation: Columbo mission artwork.
-- Cache version bumped to v15.
+- Replaced the obsolete Chris Porter version with the implemented Chris Kinsey mission.
+- Updated the story recap to reflect Convoy C-19, battered Freighter C, GST Black Flag Control, GST Hackers Conclave, the Data Miner and the four-bearing Science trace.
+- Added seven accurate GM mechanism references and the two mission-specific player mechanics.
+- Replaced the six obsolete database pages with the six authoritative MISSION INTEL pages.
+- Retained the approved Operation: Columbo mission artwork.
+- Cache version bumped to v16.
