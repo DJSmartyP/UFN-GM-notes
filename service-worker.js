@@ -1,4 +1,4 @@
-const CACHE = "ufn-gm-shell-v16";
+const CACHE = "ufn-gm-shell-v18";
 const SHELL = [
   "./",
   "./index.html",
@@ -6,6 +6,7 @@ const SHELL = [
   "./app.js?v=16",
   "./data/missions.js?v=16",
   "./data/db-pages.js?v=16",
+  "./data/op14.js?v=17",
   "./manifest.webmanifest",
   "./assets/ufn-gm-mark.svg",
   "./assets/icons/ufn-gm-db-192.png",
@@ -14,7 +15,8 @@ const SHELL = [
   "./assets/icons/ufn-gm-db-maskable-512.png",
   "./assets/icons/apple-touch-icon.png",
   "./assets/icons/favicon-64.png",
-  "./assets/icons/favicon.ico"
+  "./assets/icons/favicon.ico",
+  "./assets/missions/special-delivery.png"
 ];
 
 self.addEventListener("install", event => {
@@ -40,6 +42,7 @@ self.addEventListener("fetch", event => {
     url.pathname.endsWith("/styles.css") ||
     url.pathname.endsWith("/data/missions.js") ||
     url.pathname.endsWith("/data/db-pages.js") ||
+    url.pathname.endsWith("/data/op14.js") ||
     url.pathname.endsWith("/manifest.webmanifest") ||
     url.pathname.endsWith("/")
   );
