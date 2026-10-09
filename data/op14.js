@@ -22,7 +22,7 @@ const mission = {
       "id": "theft-and-drive-lock",
       "kind": "note",
       "label": "Theft and drive lock",
-      "description": "The GM triggers the opening theft: the ship is immobilised, GST Hijack approaches and transfers the classified cargo before escaping. Cargo locator tracing begins when ship control is restored."
+      "description": "The GM triggers the opening theft: Drive Lock immobilises the crew ship. GST Hijack warps to about 2u, closes to about 1u on impulse, transfers the cargo, turns away, and clears the ship on impulse before warping out. Drive Lock releases at 10u; cargo locator tracing then begins."
     },
     {
       "id": "kestrel-outpost",
