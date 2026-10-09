@@ -58,7 +58,7 @@ const mission = {
       "id": "beam-configuration",
       "kind": "note",
       "label": "Beam configuration",
-      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 20 damage. Each shot draws 8 energy and adds 0.06 beam-system heat. Activation warms up for five seconds; changing direction disables it."
+      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 20 damage. Each shot draws 20 energy and adds 0.24 beam-system heat. Around four to five consecutive shots can overheat the system unless Engineering manages coolant. Activation warms up for five seconds; changing direction disables it."
     },
     {
       "id": "supply-deliveries",
@@ -72,7 +72,7 @@ const mission = {
       "id": "directional-beam-control",
       "name": "Directional beam control",
       "station": "Weapons",
-      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 20, cycle 5 seconds, arc 15°. Each shot draws 8 energy and adds 0.06 beam-system heat."
+      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 20, cycle 5 seconds, arc 15°. Each shot draws 20 energy and adds 0.24 beam-system heat. Around four to five consecutive shots can overheat the system unless Engineering manages coolant."
     },
     {
       "id": "cargo-locator",
