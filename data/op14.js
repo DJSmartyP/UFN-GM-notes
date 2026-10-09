@@ -64,7 +64,7 @@ const mission = {
       "id": "supply-deliveries",
       "kind": "note",
       "label": "Supply deliveries",
-      "description": "SupplyDrop objects visibly travel to the crew ship in approximately seven seconds. Cargo or ordnance is credited on arrival and receipt is reported to Relay."
+      "description": "SupplyDrop objects launch clear of friendly ships and travel to the crew ship in approximately seven seconds. Cargo or ordnance is credited on arrival, or immediately if the crew intercepts the box; receipt is reported to Relay."
     }
   ],
   "playerMechanics": [
