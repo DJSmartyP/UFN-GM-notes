@@ -124,7 +124,7 @@ const pages = [
     "database": "MISSION INTEL",
     "group": "MISSION INTEL",
     "trigger": "Locator activates after the theft",
-    "body": "CARGO LOCATOR | FIELD GUIDE\nThe locator begins tracing the missing Secure Cargo when ship control is restored after the theft.\nTrace strength advances automatically at approximately 1% every 20 seconds while usable tracking data is available. Progress may pause until new evidence allows a stronger lock.\nDuring the final trace, processing accelerates to 1% every 2 seconds until the signal reaches 100%.\nAt 100%, the locator identifies the grid containing the ship carrying the cargo."
+    "body": "CARGO LOCATOR | FIELD GUIDE\nThe locator begins tracking the missing Secure Cargo when ship control is restored after the theft.\nTriangulation runs in the background, using the Cargo Anti Theft Tracking Device's signal to confirm successive bearings. The lock may hold while an uncertain bearing is resolved.\nAt full signal lock, the locator identifies the sector and coordinates of the vessel carrying the cargo."
   },
   {
     "id": "hijack-location",
