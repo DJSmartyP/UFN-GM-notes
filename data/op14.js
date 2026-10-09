@@ -52,7 +52,7 @@ const mission = {
       "id": "cargo-locator-and-final-target",
       "kind": "note",
       "label": "Cargo locator and final target",
-      "description": "The locator progresses approximately 1% every 24 seconds when evidence permits, with progression ceilings related to Kestrel cargo and bounty completion. Once final lock is available, GST Hijack is revealed for interception."
+      "description": "The locator progresses 1% every 20 seconds, pausing at 13%, 32%, 74% and 91% until the relevant evidence is obtained. The GM can unlock the 100% ceiling and accelerate the trace to 1% every 2 seconds from its current reading. At 100%, GST Hijack is revealed for interception."
     },
     {
       "id": "beam-configuration",
@@ -124,7 +124,15 @@ const pages = [
     "database": "MISSION INTEL",
     "group": "MISSION INTEL",
     "trigger": "Locator activates after the theft",
-    "body": "CARGO LOCATOR | FIELD GUIDE\nThe locator begins tracing the missing Secure Cargo when ship control is restored after the theft.\nTrace strength advances automatically at approximately 1% every 24 seconds while usable tracking data is available. Progress may pause until new evidence allows a stronger lock.\nAt 100%, the locator identifies the grid containing the ship carrying the cargo."
+    "body": "CARGO LOCATOR | FIELD GUIDE\nThe locator begins tracing the missing Secure Cargo when ship control is restored after the theft.\nTrace strength advances automatically at approximately 1% every 20 seconds while usable tracking data is available. Progress may pause until new evidence allows a stronger lock.\nDuring the final trace, processing accelerates to 1% every 2 seconds until the signal reaches 100%.\nAt 100%, the locator identifies the grid containing the ship carrying the cargo."
+  },
+  {
+    "id": "hijack-location",
+    "title": "Cargo Locator — GST Hijack Location",
+    "database": "MISSION INTEL",
+    "group": "MISSION INTEL",
+    "trigger": "Cargo Locator reaches 100%",
+    "body": "CARGO LOCATOR | CONFIRMED SIGNAL\nTrace: 100%\nTarget: GST Hijack\nLocation: sector B11\nCoordinates: 131935, -72157\nSignal source: Cargo Anti Theft Tracking Device."
   }
 ];
 
