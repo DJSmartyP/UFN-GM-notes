@@ -103,6 +103,14 @@ const mission = {
 };
 const pages = [
   {
+    "id": "directional-laser-guide",
+    "title": "Directional Laser — Operator Guide",
+    "database": "SHIP SYSTEMS",
+    "group": "SHIP SYSTEMS",
+    "trigger": "Mission start",
+    "body": "DIRECTIONAL LASER | OPERATOR GUIDE\n\nThe directional laser is an auxiliary beam with a narrow 15-degree firing arc. It can face forward (0 degrees), starboard (90 degrees), aft (180 degrees), or port (270 degrees).\n\nOn Weapons, use the LASER ARC buttons to select a direction. Select a target and bring it within the arc and 3,000-unit range. Press ACTIVATE LASER and allow five seconds for warm-up. The beam fires automatically at a valid target while active, cycling every five seconds and dealing 20 damage per hit.\n\nChanging direction deactivates the laser and requires another warm-up. Use DEACTIVATE LASER when the extra firepower is no longer needed.\n\nEach shot consumes 20 ship energy and adds 24% to beam-system heat. With little cooling, four to five consecutive shots can overheat the system. Monitor energy and beam heat at Engineering, apply coolant, and pause firing to let the system cool. Sustained overheating can damage the beam system."
+  },
+  {
     "id": "itg-price-list",
     "title": "ITG Supply Station — Customer Price List",
     "database": "MISSION INTEL",
