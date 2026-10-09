@@ -58,7 +58,7 @@ const mission = {
       "id": "beam-configuration",
       "kind": "note",
       "label": "Beam configuration",
-      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 20 damage. Each shot draws 20 energy and adds 0.24 beam-system heat. Around four to five consecutive shots can overheat the system unless Engineering manages coolant. Activation warms up for five seconds; changing direction disables it."
+      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 20 damage. Each shot draws 20 energy and adds 0.15 beam-system heat. Sustained fire can overheat the system; Engineering can manage the heat with coolant. Activation warms up for five seconds; changing direction disables it."
     },
     {
       "id": "supply-deliveries",
@@ -72,7 +72,7 @@ const mission = {
       "id": "directional-beam-control",
       "name": "Directional beam control",
       "station": "Weapons",
-      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 20, cycle 5 seconds, arc 15°. Each shot draws 20 energy and adds 0.24 beam-system heat. Around four to five consecutive shots can overheat the system unless Engineering manages coolant."
+      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 20, cycle 5 seconds, arc 15°. Each shot draws 20 energy and adds 0.15 beam-system heat. Sustained fire can overheat the system; Engineering can manage the heat with coolant."
     },
     {
       "id": "cargo-locator",
@@ -108,7 +108,7 @@ const pages = [
     "database": "SHIP SYSTEMS",
     "group": "SHIP SYSTEMS",
     "trigger": "Mission start",
-    "body": "DIRECTIONAL LASER | OPERATOR GUIDE\n\nThe directional laser is an auxiliary beam with a narrow 15-degree firing arc. It can face forward (0 degrees), starboard (90 degrees), aft (180 degrees), or port (270 degrees).\n\nOn Weapons, use the LASER ARC buttons to select a direction. Select a target and bring it within the arc and 3,000-unit range. Press ACTIVATE LASER and allow five seconds for warm-up. The beam fires automatically at a valid target while active, cycling every five seconds and dealing 20 damage per hit.\n\nChanging direction deactivates the laser and requires another warm-up. Use DEACTIVATE LASER when the extra firepower is no longer needed.\n\nEach shot consumes 20 ship energy and adds 24% to beam-system heat. With little cooling, four to five consecutive shots can overheat the system. Monitor energy and beam heat at Engineering, apply coolant, and pause firing to let the system cool. Sustained overheating can damage the beam system."
+    "body": "DIRECTIONAL LASER | OPERATOR GUIDE\n\nThe directional laser is an auxiliary beam with a narrow 15-degree firing arc. It can face forward (0 degrees), starboard (90 degrees), aft (180 degrees), or port (270 degrees).\n\nOn Weapons, use the LASER ARC buttons to select a direction. Select a target and bring it within the arc and 3,000-unit range. Press ACTIVATE LASER and allow five seconds for warm-up. The beam fires automatically at a valid target while active, cycling every five seconds and dealing 20 damage per hit.\n\nChanging direction deactivates the laser and requires another warm-up. Use DEACTIVATE LASER when the extra firepower is no longer needed.\n\nEach shot consumes 20 ship energy and adds 15% to beam-system heat. Sustained fire can overheat the system, especially while other beams are firing. Monitor energy and beam heat at Engineering, apply coolant, and pause firing to let the system cool. Sustained overheating can damage the beam system."
   },
   {
     "id": "itg-price-list",
