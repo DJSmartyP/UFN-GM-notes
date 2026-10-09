@@ -22,7 +22,7 @@ const mission = {
       "id": "theft-and-drive-lock",
       "kind": "note",
       "label": "Theft and drive lock",
-      "description": "The GM triggers Drive Lock and the opening theft. Unarmed, indestructible GST Hijack warps in from 25u, drops warp near 1.5u, and closes to 1u on impulse. Relay logs the cargo bay breach before a visible cargo object moves into Hijack; then it logs ALL CARGO TAKEN. Hijack is ordered to warp away at speed 4000. Drive Lock releases at 20u with the Control Reasserted log. Once Hijack leaves long-range sensors and despawns, the Cargo Locator starts and its field guide appears."
+      "description": "The GM triggers Drive Lock and the opening theft. Unarmed, indestructible GST Hijack warps in from 25u and drops warp near 1.5u; Relay logs the cargo bay breach at that moment. Hijack closes to 1u on impulse, then a visible cargo object moves into the craft before Relay logs ALL CARGO TAKEN. Hijack is ordered to warp away at speed 4000. Drive Lock releases at 20u with the Control Reasserted log. Once Hijack leaves long-range sensors and despawns, the Cargo Locator starts and its field guide appears."
     },
     {
       "id": "kestrel-outpost",
