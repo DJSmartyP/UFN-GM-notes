@@ -58,7 +58,7 @@ const mission = {
       "id": "beam-configuration",
       "kind": "note",
       "label": "Beam configuration",
-      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 24 damage. Each shot draws 8 energy and adds 0.06 beam-system heat. Activation warms up for five seconds; changing direction disables it."
+      "description": "Directional beam: forward 0°, starboard 90°, aft 180°, port 270°. Base range 3,000, 15° arc, 5-second cycle, 20 damage. Each shot draws 8 energy and adds 0.06 beam-system heat. Activation warms up for five seconds; changing direction disables it."
     },
     {
       "id": "supply-deliveries",
@@ -72,7 +72,7 @@ const mission = {
       "id": "directional-beam-control",
       "name": "Directional beam control",
       "station": "Weapons",
-      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 24, cycle 5 seconds, arc 15°. Each shot draws 8 energy and adds 0.06 beam-system heat."
+      "description": "Select forward, starboard, aft or port and activate the directional beam. It requires a five-second warm-up; a direction change cancels activation. Base range 3,000, damage 20, cycle 5 seconds, arc 15°. Each shot draws 8 energy and adds 0.06 beam-system heat."
     },
     {
       "id": "cargo-locator",
@@ -108,7 +108,7 @@ const pages = [
     "database": "MISSION INTEL",
     "group": "MISSION INTEL",
     "trigger": "First docking at ITG Supply Station",
-    "body": "ITG SUPPLY STATION | CUSTOMER PRICE LIST\nReady for your next run? The ITG Supply Station keeps your ship supplied and fighting fit with proven ordnance and precision fittings.\nPayment: exact trade value in parts. Common parts count as 1 each; rare parts count as 2 each.\n\nORDNANCE | DELIVERED BY SUPPLY DROP\n4 HVLI — 1 trade value\n2 EMP — 1 trade value\n2 Mine — 1 trade value\n3 Homing — 1 trade value\n1 Nuke — 4 trade value\n\nFITTINGS | INSTALLED WHILE DOCKED\nExtended Focusing Array — 4 trade value. Directional-beam range increases from 3,000 to 4,500; energy cost rises by 2 per shot.\nRapid Capacitor — 4 trade value. Directional-beam cycle time falls from 5 to 4 seconds; heat rises by 0.015 per shot.\nOvercharged Emitter — 5 trade value. Directional-beam damage rises from 24 to 30 per shot; energy cost rises by 4 and heat by 0.02 per shot.\nEngine Tuning — 5 trade value. Forward and reverse impulse speed and turn rate increase by 20%.\nShield Reinforcement — 6 trade value. Maximum shield capacity increases by 25%.\n\nOrder and pay through station comms. After payment, select Fit while docked for installations. Ordnance is dispatched to your ship by supply drop."
+    "body": "ITG SUPPLY STATION | CUSTOMER PRICE LIST\nReady for your next run? The ITG Supply Station keeps your ship supplied and fighting fit with proven ordnance and precision fittings.\nPayment: exact trade value in parts. Common parts count as 1 each; rare parts count as 2 each.\n\nORDNANCE | DELIVERED BY SUPPLY DROP\n4 HVLI — 1 trade value\n2 EMP — 1 trade value\n2 Mine — 1 trade value\n3 Homing — 1 trade value\n1 Nuke — 4 trade value\n\nFITTINGS | INSTALLED WHILE DOCKED\nExtended Focusing Array — 4 trade value. Directional-beam range increases from 3,000 to 4,500; energy cost rises by 2 per shot.\nRapid Capacitor — 4 trade value. Directional-beam cycle time falls from 5 to 4 seconds; heat rises by 0.015 per shot.\nOvercharged Emitter — 5 trade value. Directional-beam damage rises from 20 to 25 per shot; energy cost rises by 4 and heat by 0.02 per shot.\nEngine Tuning — 5 trade value. Forward and reverse impulse speed and turn rate increase by 20%.\nShield Reinforcement — 6 trade value. Maximum shield capacity increases by 25%.\n\nOrder and pay through station comms. After payment, select Fit while docked for installations. Ordnance is dispatched to your ship by supply drop."
   },
   {
     "id": "itg-weekly-bounties",
