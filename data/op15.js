@@ -35,7 +35,7 @@ const mission = {
       id: "alignment",
       kind: "note",
       label: "Allegiance controls",
-      description: "The crew begins friendly to UFNI. Change Allegiance switches between UFNI and Ghosts; Aligned: UFNI / Aligned: Ghosts displays the current state. Use the switch after Grifter as the story requires. Boarding Anderson sets Ghost alignment automatically. Change it again if the crew later sides with UFNI."
+      description: "The crew begins friendly to UFNI. The Aligned: UFNI / Aligned: Ghosts button shows the current side; press it to switch between them. Use it after Grifter as the story requires. Boarding Anderson sets Ghost alignment automatically. Press it again if the crew later sides with UFNI."
     },
     {
       id: "trace",

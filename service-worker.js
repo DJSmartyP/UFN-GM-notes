@@ -1,4 +1,4 @@
-const CACHE = "ufn-gm-shell-v38";
+const CACHE = "ufn-gm-shell-v39";
 const SHELL = [
   "./",
   "./index.html",
@@ -7,7 +7,7 @@ const SHELL = [
   "./data/missions.js?v=16",
   "./data/db-pages.js?v=16",
   "./data/op14.js?v=31",
-  "./data/op15.js?v=38",
+  "./data/op15.js?v=39",
   "./manifest.webmanifest",
   "./assets/ufn-gm-mark.svg",
   "./assets/icons/ufn-gm-db-192.png",
