@@ -123,3 +123,9 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 
 - Matched the OP15 GM reference to the revised automated standing orders shown aboard Anderson.
 - Bumped the service-worker cache to v33 for the updated mission note.
+
+## v34 - Harvest Janus retreat and asteroids
+
+- Documented the Janus Run GM control, automatic 10% hull trigger, and radar-distance retreat.
+- Documented the authored asteroid placements and wider size range.
+- Bumped the service-worker cache to v34 for the updated mission notes.

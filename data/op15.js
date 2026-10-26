@@ -66,6 +66,18 @@ const mission = {
       description: "Haven Seven, sector H11, is a civilian habitat with food and medical stores, modest defenders and several cargo or family ships. Mayfield commands UFNI Janus with six escorts. The three already-raided Ghost settlements are Mossbank I5, Lantern Reach I9 and Quiet Harbour G1. These sites and the entire Haven/Janus encounter are created in place only after Anderson transfer, apart from deliberate DEBUG previews. The GM voices Mayfield and the crew chooses a side."
     },
     {
+      id: "janus-retreat",
+      kind: "note",
+      label: "Janus retreat",
+      description: "Janus cannot be destroyed by combat. Janus Run appears on the GM's main menu while Janus is present. Press it to send Mayfield away, or let the automatic trigger start the run when Janus reaches 10% hull. Janus turns away from Anderson, uses high-speed warp and despawns only after travelling beyond the player's long-range radar. Its escorts stay and the GM handles the outcome."
+    },
+    {
+      id: "asteroid-field",
+      kind: "note",
+      label: "Asteroid field",
+      description: "The GM's 174 authored asteroid positions are fixed between runs. Their sizes now range from small rocks to ten scattered giants. Rocks around Haven Seven appear with the final encounter; station approaches and trace points retain clearances."
+    },
+    {
       id: "start-raid",
       kind: "note",
       label: "Start the final raid",
@@ -75,7 +87,7 @@ const mission = {
       id: "gm-controls",
       kind: "note",
       label: "GM button list",
-      description: "Main menu: Kinsey Note sends Whisper; Grifter Note downloads the two Grifter pages and enables the tracker; Change Allegiance switches sides; Aligned: UFNI / Aligned: Ghosts displays status without changing it; Start Raid launches the final assault after transfer; DEBUG > opens test visibility controls. Standard HACKS >, COMBAT SPAWN > and REINFORCE > menus remain available. Standard UFN reinforcements are friendly to the player; UFN combat spawns are hostile."
+      description: "Main menu: Kinsey Note sends Whisper; Grifter Note downloads the two Grifter pages and enables the tracker; Change Allegiance switches sides; Aligned: UFNI / Aligned: Ghosts displays status without changing it; Start Raid launches the final assault after transfer; Janus Run triggers Mayfield's retreat while his ship is present; DEBUG > opens test visibility controls. Standard HACKS >, COMBAT SPAWN > and REINFORCE > menus remain available. Standard UFN reinforcements are friendly to the player; UFN combat spawns are hostile."
     },
     {
       id: "debug-controls",
