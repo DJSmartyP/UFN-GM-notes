@@ -100,6 +100,7 @@ function renderHome() {
       } else {
         art.src = mission.artwork || `assets/missions/${mission.id}.png`;
         art.alt = `${mission.name} mission art`;
+        if (mission.artPosition) art.style.objectPosition = mission.artPosition;
       }
 
       node.querySelector(".mission-card-name").textContent = mission.name;

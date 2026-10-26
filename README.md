@@ -18,6 +18,8 @@ Phone-first GM companion for UFN / EmptyEpsilon missions.
 - OP11 — Operation: Resonance
 - OP12 — Operation: Continuum
 - OP13 — Operation: Columbo
+- OP14 — Operation: Special Delivery
+- OP15 — Operation: Harvest
 
 ### Light and Dark Campaign
 - LD01 — Into The Darkness
@@ -109,3 +111,10 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Replaced the six obsolete database pages with the six authoritative MISSION INTEL pages.
 - Retained the approved Operation: Columbo mission artwork.
 - Cache version bumped to v16.
+
+## v32 - Operation: Harvest
+
+- Added OP15 with the GM story flow, live GM button reference, player tracker and self-destruct mechanics, faction choice, final raid, and current playtest limits.
+- Added the six exact mission database pages from `scenario_OP15_operationHarvest.lua`, including their availability before or after boarding Anderson.
+- Used the supplied mission artwork for the tile and focused its thumbnail on the Ghost habitat.
+- Bumped the service-worker cache to v32 so installed copies load the new mission data and image.
