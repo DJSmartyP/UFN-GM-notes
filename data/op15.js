@@ -8,18 +8,14 @@ const mission = {
   code: "OP15",
   campaign: "UFN Operations",
   name: "Operation: Harvest",
-  strap: "OP15 · A strange message from a rogue Commodore leads to a terrible truth...",
-  status: "Playtest build",
+  strap: "OP15 · UFN Operation",
+  status: "GM notes loaded",
   artwork: "assets/missions/harvest.jpg",
   artPosition: "80% 50%",
   recap: [
     {
       title: "Mission Synopsis",
-      body: "Resolute is sent to observe GST Hearthside Habitat after UFN drones are seen servicing it. Kinsey, hunted by UFNI, sends a desperate note aboard UFN Whisper and asks the crew to speak to Grifter. At Hearthside, Grifter says UFNI has spent months taking food and medicine from Ghost civilians. His tracker leads Resolute through three increasingly dangerous UFNI patrols to a hidden signal in a nebula. Grifter proposes a desperate transfer: the crew arms Resolute's native self-destruct and appears aboard the empty UFNI Anderson. Anderson's records expose Operation FALLOW, Mayfield's plan to deprive Ghost settlements of essentials. UFNI pursuers attack. The crew then reaches GST Haven Seven Habitat, where Mayfield's Janus fleet is poised to raid civilian stores. The players choose whether to protect the Ghosts or support UFNI; the GM runs the outcome and debrief."
-    },
-    {
-      title: "GM story beats",
-      body: "Brief the observation of Hearthside. Send Kinsey's note while en route. At Hearthside, play Grifter's conversation and release his two records. Guide the crew through the three tracker echoes and patrols. At the signal fix, voice Grifter's self-destruct idea. After transfer, let the crew read Anderson's files and survive its UFNI pursuit. On the way to Haven Seven, play Mayfield and let the crew choose a side. Start the raid, then adjudicate the battle and debrief by voice. There are no scripted comms choices or automatic mission outcomes."
+      body: "Resolute is sent to observe GST Hearthside Habitat after UFN drones are seen servicing it. Kinsey, hunted by UFNI, sends a desperate note aboard UFNI Whisper and asks the crew to speak to Grifter. At Hearthside, Grifter says UFNI has spent months taking food and medicine from Ghost civilians. His tracker leads Resolute through three increasingly dangerous UFNI patrols to a hidden signal in a nebula. Grifter proposes a desperate transfer: the crew arms Resolute's native self-destruct and appears aboard the empty UFNI Anderson. Anderson's records expose Operation FALLOW, Commodore Mayfield's plan to deprive Ghost settlements of essentials. UFNI pursuers attack. The crew then reaches GST Haven Seven Habitat, where his Janus fleet is poised to raid civilian stores. The players choose whether to protect the Ghosts or support UFNI; the GM runs the outcome and debrief."
     }
   ],
   mechanisms: [
@@ -27,79 +23,49 @@ const mission = {
       id: "opening-and-kinsey",
       kind: "note",
       label: "Opening brief and Kinsey's note",
-      description: "The GM briefs the crew to observe Hearthside, sector D2; that briefing is spoken, not scripted. Press Kinsey Note when ready. UFN Whisper appears, approaches Resolute and launches one homing supply pod. It holds position until the pod arrives, then turns and departs. Helms H.I.D.E.S shows DRIVE LOCK during delivery; the lock clears automatically when the pod reaches Resolute. One receipt status appears in the ship log, and Kinsey - Dispatch appears under --MISSION INTEL--. The note is a one-shot GM cue."
+      description: "Brief the crew to observe Hearthside, sector D2. Press Kinsey Note when ready: UFNI Whisper delivers Kinsey's dispatch by supply pod. Resolute's drive is locked during delivery and releases when the note arrives. The Kinsey - Dispatch database page then appears. The GM voices Kinsey; the button is one use."
     },
     {
       id: "grifter",
       kind: "note",
       label: "Grifter at Hearthside",
-      description: "Hearthside is a civilian habitat with weak local ships and cargo traffic; they may be hostile before the GM changes allegiance. Play Grifter's conversation in person. Press Grifter Note to download Grifter - Raid Report and Grifter - Tracker. No scripted comms dialogue or Grifter delivery drone is used."
+      description: "Hearthside is a civilian habitat with light defences and family traffic. Play Grifter's conversation aboard the station, then press Grifter Note to download his raid report and tracker instructions. This enables the Relay and Science trace; it cannot trigger before the note."
     },
     {
       id: "alignment",
       kind: "note",
       label: "Allegiance controls",
-      description: "The crew begins aligned with UFNI. Aligned: UFNI / Aligned: Ghosts is a read-only GM status button. Change Allegiance switches between those states at any time; it is never locked. Use Ghost alignment after Grifter if appropriate. Boarding Anderson sets Ghost alignment automatically. At Mayfield, use Change Allegiance again only if the crew chooses UFNI. The GM decides which faction is hostile to the players."
+      description: "The crew begins friendly to UFNI. Change Allegiance switches between UFNI and Ghosts; Aligned: UFNI / Aligned: Ghosts displays the current state. Use the switch after Grifter as the story requires. Boarding Anderson sets Ghost alignment automatically. Change it again if the crew later sides with UFNI."
     },
     {
       id: "trace",
       kind: "note",
       label: "Carrier trace and patrols",
-      description: "The three fixed echoes progress LOW, MEDIUM, HIGH. Relay shows live range; Science shows live bearing. The crew plots its own course and waypoints. Within 2.5U of an echo, a Level 1 drive lock and hostile UFNI patrol trigger: two, then three, then four ships, using decloak spawns. Clear Helms lock and destroy the whole wave to reveal the next echo. After the third wave, the consoles show SIGNAL LOCKED; at the hidden site they show SIGNAL REACHED. No database page updates during the trace."
+      description: "After Grifter Note, Relay shows live range and Science shows bearing to three fixed echoes. The route bends between readings and stays clear of the ZZ sectors. Within 2.5U of each echo, a Level 1 drive lock and decloaking UFNI patrol trigger: two ships, then three, then four. Destroy the wave to reveal the next reading. The final signal points to Anderson's concealed berth."
     },
     {
       id: "anderson-transfer",
       kind: "note",
       label: "Hidden Anderson and transfer",
-      description: "Anderson has no normal pre-transfer spawn and is not visible to players while they trace it. It is created at the nebula signal position when Resolute's native Engineering self-destruct detonates. The self-destruct remains available throughout the mission, and the transfer callback does not check range; guide the crew there by voice before they arm it. All player stations receive the teleport message. The earlier Kinsey and Grifter database pages and Relay/Science tracker readouts are removed; Anderson's three files appear. Automated standing orders in the ship log explain its concealed berth and why its crew joined Janus. Both player ships are non-destroyable by combat."
+      description: "Anderson is created in the hidden nebula when Resolute's native Engineering self-destruct detonates. Guide the crew to the signal before they arm it; the transfer itself has no range check. All player stations receive the teleport message. The Kinsey and Grifter pages and trace readouts clear, and Anderson's three files appear. Both player ships resist combat destruction."
     },
     {
       id: "anderson-pursuit",
       kind: "note",
       label: "UFNI pursuit after boarding",
-      description: "Three hostile UFNI interceptors decloak near Anderson shortly after the transfer. The new ship has paired port/starboard beams, flank missile tubes and an aft mine tube, with roughly Resolute-level power. Use the fight to press the crew to read the files and leave the nebula."
+      description: "Three hostile UFNI interceptors decloak shortly after transfer. Anderson has two centrally placed side beams and two missile tubes: forward loads everything except mines, rear loads all ordnance. Nukes require GM authorisation through REINFORCE > on either player ship."
     },
     {
       id: "final-encounter",
       kind: "note",
       label: "Haven Seven and Janus",
-      description: "Haven Seven, sector H11, is a civilian habitat with food and medical stores, modest defenders and several cargo or family ships. Mayfield commands UFNI Janus with six escorts. The three already-raided Ghost settlements are Mossbank I5, Lantern Reach I9 and Quiet Harbour G1. These sites and the entire Haven/Janus encounter are created in place only after Anderson transfer, apart from deliberate DEBUG previews. The GM voices Mayfield and the crew chooses a side."
+      description: "Haven Seven, sector H11, is a civilian habitat with modest defences and family traffic. Commodore Mayfield commands UFNI Janus and six escorts. The GM voices Mayfield and lets the crew choose a side. Start Fight appears after Anderson transfer; press it to send four UFNI assault ships against the station. The GM handles the battle's outcome and debrief."
     },
     {
       id: "janus-retreat",
       kind: "note",
       label: "Janus retreat",
-      description: "Janus cannot be destroyed by combat. Janus Run appears on the GM's main menu while Janus is present. Press it to send Mayfield away, or let the automatic trigger start the run when Janus reaches 10% hull. Janus turns away from Anderson, uses high-speed warp and despawns only after travelling beyond the player's long-range radar. Its escorts stay and the GM handles the outcome."
-    },
-    {
-      id: "asteroid-field",
-      kind: "note",
-      label: "Asteroid field",
-      description: "The GM's 174 authored asteroid positions are fixed between runs. Their sizes now range from small rocks to ten scattered giants. Rocks around Haven Seven appear with the final encounter; station approaches and trace points retain clearances."
-    },
-    {
-      id: "start-raid",
-      kind: "note",
-      label: "Start the final raid",
-      description: "Start Raid appears after boarding Anderson. Press it when the encounter should begin; four UFNI assault ships attack Haven Seven while the others hold position. Change Allegiance determines which side is hostile to the players. The script does not track or declare an ending; the GM handles the result and debrief."
-    },
-    {
-      id: "gm-controls",
-      kind: "note",
-      label: "GM button list",
-      description: "Main menu: Kinsey Note sends Whisper; Grifter Note downloads the two Grifter pages and enables the tracker; Change Allegiance switches sides; Aligned: UFNI / Aligned: Ghosts displays status without changing it; Start Raid launches the final assault after transfer; Janus Run triggers Mayfield's retreat while his ship is present; DEBUG > opens test visibility controls. Standard HACKS >, COMBAT SPAWN > and REINFORCE > menus remain available. Standard UFN reinforcements are friendly to the player; UFN combat spawns are hostile."
-    },
-    {
-      id: "debug-controls",
-      kind: "note",
-      label: "DEBUG visibility controls",
-      description: "DEBUG > offers Show/Hide Traces, Show/Hide Anderson (preview before transfer), Show/Hide Raid Sites and Show/Hide Final. These are GM test controls. Showing a preview creates it at its real map position; hiding removes it. The controls do not place player waypoints."
-    },
-    {
-      id: "runtime-status",
-      kind: "note",
-      label: "Playtest status",
-      description: "Load scenario_OP15_operationHarvest.lua with the standard EE packages. The separate native self-destruct transfer test succeeded. The full Operation Harvest mission has passed Lua syntax checks but still needs an EmptyEpsilon multiplayer playtest for GM buttons, database transitions, faction behaviour, patrol timing, crew transfer and the final raid."
+      description: "Janus resists combat destruction. Janus Run on the GM menu, or 10% hull, starts a fast warp escape away from the player. Janus despawns only after moving beyond long-range radar; its escorts remain."
     }
   ],
   playerMechanics: [
@@ -116,22 +82,10 @@ const mission = {
       description: "Science gains the tracker label, status and live bearing in degrees from Resolute's current position. Combine it with Relay's range to steer to each echo; players place any waypoints themselves."
     },
     {
-      id: "harvest-helm-lock",
-      name: "Trace-point drive lock",
-      station: "Helms",
-      description: "Each trace-point patrol triggers a Level 1 drive lock. Clear it using the standard Helms procedure while Weapons deals with the attackers."
-    },
-    {
       id: "harvest-self-destruct",
       name: "Native self-destruct transfer",
       station: "Engineering",
       description: "At Grifter's cue near the hidden signal, arm and confirm the built-in self-destruct using the normal Engineering controls. When Resolute detonates, the crew moves to UFNI Anderson and each station receives a teleport message. The code does not gate this transfer by distance."
-    },
-    {
-      id: "harvest-anderson-fit",
-      name: "Anderson weapon layout",
-      station: "Weapons",
-      description: "Anderson's beams fire from port and starboard banks rather than Resolute's forward pair. Missile tubes face opposite flanks; the aft tube launches mines."
     }
   ],
   dbEntries: []
@@ -143,7 +97,7 @@ const pages = [
     title: "Kinsey - Dispatch",
     database: "--MISSION INTEL--",
     group: "--MISSION INTEL--",
-    trigger: "UFN Whisper's pod arrives; removed on Anderson transfer",
+    trigger: "UFNI Whisper's pod arrives; removed on Anderson transfer",
     body: `Captain,
 
 UFNI is hunting me. I have changed ships twice and I cannot risk a direct transmission. Whisper was the only way I could reach you, but they may have tracked its flight. I think they are coming for Resolute now too. I am sorry I have brought this to your door. Please hear me out.
@@ -208,7 +162,8 @@ GST Haven Seven Habitat, sector H11 — Food reserve and medical stores targeted
 
 Retain the true manifests aboard Anderson. Send UFN command only the approved external account. If anyone asks why the figures differ, there is no second set of figures.
 
-Mayfield`
+Commodore Mayfield
+Commanding Officer, UFNI Janus`
   },
   {
     id: "fallow-directive",
@@ -224,7 +179,7 @@ I have read the Legal Review Office's finding that FALLOW is illegal under UFN r
 
 The true target list and manifests remain within this UFNI compartment. Flight Control and UFN Fleet Command are to receive the approved external reports only. No wider command authorisation or disclosure is to be sought while FALLOW is active.
 
-Signed: Mayfield, UFNI Intelligence
+Signed: Commodore Mayfield, Commanding Officer, UFNI Janus
 Approved: Rear Admiral [REDACTED], UFNI Intelligence`
   },
   {

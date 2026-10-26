@@ -139,3 +139,9 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 
 - Updated the Kinsey GM reference to match Whisper's slower approach, pod handoff pause, visible turn, and departure.
 - Bumped the service-worker cache to v36 for the updated mission note.
+
+## v37 - Harvest GM notes
+
+- Matched the Harvest page to the established mission-page layout, with one synopsis and the GM controls described at the relevant story beats.
+- Identified Commodore Mayfield as commanding officer of UFNI Janus in both Anderson records.
+- Bumped the service-worker cache to v37 for the updated mission notes.
