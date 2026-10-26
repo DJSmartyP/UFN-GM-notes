@@ -27,7 +27,7 @@ const mission = {
       id: "opening-and-kinsey",
       kind: "note",
       label: "Opening brief and Kinsey's note",
-      description: "The GM briefs the crew to observe Hearthside, sector D2; that briefing is spoken, not scripted. Press Kinsey Note when ready. UFN Whisper flies in and delivers a supply pod. Resolute's drives lock during delivery, then restore when the pod arrives. Kinsey - Dispatch appears under --MISSION INTEL--. The note is a one-shot GM cue."
+      description: "The GM briefs the crew to observe Hearthside, sector D2; that briefing is spoken, not scripted. Press Kinsey Note when ready. UFN Whisper flies in quickly and sends one homing supply pod. Helms H.I.D.E.S shows DRIVE LOCK during delivery; the lock clears automatically when the pod reaches Resolute. One receipt status appears in the ship log, and Kinsey - Dispatch appears under --MISSION INTEL--. The note is a one-shot GM cue."
     },
     {
       id: "grifter",

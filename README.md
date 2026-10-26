@@ -129,3 +129,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Documented the Janus Run GM control, automatic 10% hull trigger, and radar-distance retreat.
 - Documented the authored asteroid placements and wider size range.
 - Bumped the service-worker cache to v34 for the updated mission notes.
+
+## v35 - Harvest Kinsey delivery
+
+- Updated the GM reference for Whisper's faster one-shot supply pod, Helms H.I.D.E.S drive-lock indicator, automatic release, and single receipt log.
+- Bumped the service-worker cache to v35 for the updated mission note.
