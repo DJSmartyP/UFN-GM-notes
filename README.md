@@ -134,3 +134,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 
 - Updated the GM reference for Whisper's faster one-shot supply pod, Helms H.I.D.E.S drive-lock indicator, automatic release, and single receipt log.
 - Bumped the service-worker cache to v35 for the updated mission note.
+
+## v36 - Whisper delivery staging
+
+- Updated the Kinsey GM reference to match Whisper's slower approach, pod handoff pause, visible turn, and departure.
+- Bumped the service-worker cache to v36 for the updated mission note.
