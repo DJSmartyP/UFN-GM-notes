@@ -180,25 +180,25 @@ I have read the Legal Review Office's finding that FALLOW is illegal under UFN r
 The true target list and manifests remain within this UFNI compartment. Flight Control and UFN Fleet Command are to receive the approved external reports only. No wider command authorisation or disclosure is to be sought while FALLOW is active.
 
 Signed: Commodore Mayfield, Commanding Officer, UFNI Janus
-Approved: Rear Admiral [REDACTED], UFNI Intelligence`
+Approved: Rear Admiral [REDACTED]`
   },
   {
     id: "fallow-legal-review",
-    title: "FALLOW - Legal Review",
+    title: "Fallow - Legal Review",
     database: "--MISSION INTEL--",
     group: "--MISSION INTEL--",
     trigger: "Crew boards UFNI Anderson",
     body: `* OVERVIEW OF PROPOSED ACTION *
-The Operation FALLOW file proposes repeated UFNI raids on Ghost civilian settlements. Ships would take food, medicine and equipment needed to keep water, clinics and other essential services running. The stated aim is to create enough hunger, illness and hardship that civilian families turn against Ghost leadership and demand its surrender.
+The Operation Fallow file proposes repeated UFNI raids on Ghost civilian settlements. Ships would take food, medicine and equipment needed to keep water, clinics and other essential services running. The stated aim is to create enough hunger, illness and hardship that civilian families turn against Ghost leadership and demand its surrender.
 
 * LEGAL REVIEW *
-UFN engagement rules protect civilians and the supplies they need to survive. FALLOW selects those supplies precisely because their loss will harm the people who depend on them. The proposed seizures are therefore deliberate attacks on civilian welfare, not lawful recovery of military assets. This office finds no legal basis on which to authorise any raid under the plan.
+UFN engagement rules protect civilians and the supplies they need to survive. Fallow selects those supplies precisely because their loss will harm the people who depend on them. The proposed seizures are therefore deliberate attacks on civilian welfare, not lawful recovery of military assets. This office finds no legal basis on which to authorise any raid under the plan.
 
 * ETHICAL CONSIDERATIONS *
-The UFN code of service asks officers to defend lives, exercise restraint and uphold its principles even during war. FALLOW treats the suffering of families as a weapon. The claim that any method is acceptable if it weakens the Ghosts is incompatible with that code. A surrender won by making civilians hungry and sick would cost the UFN the standards it exists to defend.
+The UFN code of service asks officers to defend lives, exercise restraint and uphold its principles even during war. Fallow treats the suffering of families as a weapon. The claim that any method is acceptable if it weakens the Ghosts is incompatible with that code. A surrender won by making civilians hungry and sick would cost the UFN the standards it exists to defend.
 
 * CONCLUSION *
-Operation FALLOW is illegal and contrary to the UFN code of service. Legal clearance is denied in full. Withdraw the proposal and refer it to UFN command before any deployment. Any officer found engaging in the conduct proposed by Operation FALLOW, or using similar methods to coerce a civilian population, may face court-martial under UFN service law.
+Operation Fallow is illegal and contrary to the UFN code of service. Legal clearance is denied in full. Withdraw the proposal and refer it to UFN command before any deployment. Any officer found engaging in the conduct proposed by Operation Fallow, or using similar methods to coerce a civilian population, may face court-martial under UFN service law.
 
 UFNI Legal Review Office`
   }
