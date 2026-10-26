@@ -118,3 +118,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Added the six exact mission database pages from `scenario_OP15_operationHarvest.lua`, including their availability before or after boarding Anderson.
 - Used the supplied mission artwork for the tile and focused its thumbnail on the Ghost habitat.
 - Bumped the service-worker cache to v32 so installed copies load the new mission data and image.
+
+## v33 - Harvest ship-log wording
+
+- Matched the OP15 GM reference to the revised automated standing orders shown aboard Anderson.
+- Bumped the service-worker cache to v33 for the updated mission note.

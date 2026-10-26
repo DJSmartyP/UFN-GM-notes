@@ -51,7 +51,7 @@ const mission = {
       id: "anderson-transfer",
       kind: "note",
       label: "Hidden Anderson and transfer",
-      description: "Anderson has no normal pre-transfer spawn and is not visible to players while they trace it. It is created at the nebula signal position when Resolute's native Engineering self-destruct detonates. The self-destruct remains available throughout the mission, and the transfer callback does not check range; guide the crew there by voice before they arm it. All player stations receive the teleport message. The earlier Kinsey and Grifter database pages and Relay/Science tracker readouts are removed; Anderson's three files appear. A ship-log standby record explains that Anderson was concealed and its crew reassigned to Janus. Both player ships are non-destroyable by combat."
+      description: "Anderson has no normal pre-transfer spawn and is not visible to players while they trace it. It is created at the nebula signal position when Resolute's native Engineering self-destruct detonates. The self-destruct remains available throughout the mission, and the transfer callback does not check range; guide the crew there by voice before they arm it. All player stations receive the teleport message. The earlier Kinsey and Grifter database pages and Relay/Science tracker readouts are removed; Anderson's three files appear. Automated standing orders in the ship log explain its concealed berth and why its crew joined Janus. Both player ships are non-destroyable by combat."
     },
     {
       id: "anderson-pursuit",
