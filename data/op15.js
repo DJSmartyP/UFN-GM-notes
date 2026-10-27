@@ -201,6 +201,27 @@ The UFN code of service asks officers to defend lives, exercise restraint and up
 Operation Fallow is illegal and contrary to the UFN code of service. Legal clearance is denied in full. Withdraw the proposal and refer it to UFN command before any deployment. Any officer found engaging in the conduct proposed by Operation Fallow, or using similar methods to coerce a civilian population, may face court-martial under UFN service law.
 
 UFNI Legal Review Office`
+  },
+  {
+    id: "mayfield-reply-to-legal",
+    title: "Mayfield Reply to Legal",
+    database: "--MISSION INTEL--",
+    group: "--MISSION INTEL--",
+    trigger: "Crew boards UFNI Anderson",
+    body: `To the UFNI Legal Review Office,
+
+Your ruling has sat on my desk for three days. I have tried to find an answer to it, but I keep returning to the same question: what am I to tell the next crew I send into Ghost space?
+
+Seven years ago, Ghost raiders killed my wife and our son aboard a medical transport. I know how readily grief can distort a man's judgement. That is why I did not bring Fallow to you when I first conceived of it. I waited. I fought this war by the rules. Since then, savage Ghost attacks have taken commanding officers I trusted with my life. I have written to their families and met crews who came home without the people who led them out.
+
+Our ships are running short of supplies. We can win another engagement, but we cannot replace every experienced commander or ask their crews to endure this indefinitely. I need a way to make Ghost leadership end these raids.
+
+I have read every objection in your finding. I am not asking you to set your judgement aside. I am asking you to help me find terms under which you could bring Fallow before Fleet Command. Set limits and oversight. Require me to answer for every order given under it. If you can show me another course that might end this campaign in time, I will take it.
+
+Please reconsider. I have to return to those crews with more than an instruction to hold the line.
+
+Commodore Mayfield
+Commanding Officer, UFNI Janus`
   }
 ];
 
