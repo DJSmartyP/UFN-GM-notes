@@ -20,6 +20,7 @@ Phone-first GM companion for UFN / EmptyEpsilon missions.
 - OP13 — Operation: Columbo
 - OP14 — Operation: Special Delivery
 - OP15 — Operation: Harvest
+- OP16 — Operation: Lifeboat
 
 ### Light and Dark Campaign
 - LD01 — Into The Darkness
@@ -145,3 +146,10 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Matched the Harvest page to the established mission-page layout, with one synopsis and the GM controls described at the relevant story beats.
 - Identified Commodore Mayfield as commanding officer of UFNI Janus in both Anderson records.
 - Bumped the service-worker cache to v37 for the updated mission notes.
+
+## v41 - Operation: Lifeboat
+
+- Added OP16 with its synopsis, mission-specific GM sequence and station mechanics. Shared controls appear once for Engineering/Engineering+ and Weapons/Tactical/SinglePilot; standard package controls are excluded.
+- Added the Mission Intel root description and five exact scenario database pages, with their unlock points.
+- Used the existing Operation: Lifeboat artwork for the mission tile and added it to the offline cache.
+- Bumped the service-worker cache to v41.
