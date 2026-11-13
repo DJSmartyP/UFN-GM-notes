@@ -14,7 +14,7 @@ const mission = {
   artPosition: "38% 50%",
   recap: [{
     title: "Mission Synopsis",
-    body: "A large, unstable nebula has appeared in a sector where no field existed twenty-four hours earlier. Four ships are trapped inside: UFN Asteria, TSN Halley, UFN Larkspur and UMB Helix. Umbra agrees to assist if its ship is rescued too, and its vessels observe a ceasefire with the UFN for this deployment. Vanguard must enter the field, send each ship the transit data needed to escape, and guide them home while AXIS forces attack. The final Umbra handoff reveals an AXIS generator hidden behind a replenishing mine screen; destroying it collapses the field."
+    body: "A large, unstable nebula has appeared in a sector where no field existed twenty-four hours earlier. Four ships are trapped inside: UFN Asteria, TSN Halley, UFN Larkspur and UMB Helix. Umbra agrees to assist if its ship is rescued too, and its vessels observe a ceasefire with the UFN for this deployment. The assigned UFN crew must enter the field, send each ship the transit data needed to escape, and guide them home while AXIS forces attack. The final Umbra handoff reveals an AXIS generator hidden behind a replenishing mine screen; destroying it collapses the field."
   }],
   mechanisms: [
     {
@@ -33,7 +33,7 @@ const mission = {
       id: "hazard-recall",
       kind: "note",
       label: "Nebula hazard and recall",
-      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share three Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. AXIS and rescue ships are immune to the scripted hazard."
+      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share three Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. The player ship is set non-destroyable, although its systems can be badly damaged. AXIS and rescue ships are immune to the scripted hazard."
     },
     {
       id: "rescue-flow",
@@ -57,7 +57,7 @@ const mission = {
       id: "generator-finale",
       kind: "note",
       label: "Generator, mines and finale",
-      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the screen, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator collapses the nebula."
+      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the screen, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator immediately removes the blue/red overlay and ends scripted exposure. Relay changes to NO NEBULA DETECTED; the nebula then flickers and disappears in random patches over about eight seconds."
     },
     {
       id: "gm-zone-indicator",
@@ -73,6 +73,12 @@ const mission = {
     }
   ],
   playerMechanics: [
+    {
+      id: "flight-control-disruption",
+      name: "Flight Control disruption",
+      station: "Relay",
+      description: "Inside either blue or red nebula space, the Relay Call FC control and GM FC status read FC: OFF - Disrupted, and calls cannot connect. Leaving the field restores the previous Flight Control state. Destroying the generator ends the disruption as the field collapses."
+    },
     {
       id: "rescue-tracking",
       name: "Rescue tracking",
@@ -211,3 +217,4 @@ Destroying individual mines before transmission will not open a lasting gap: the
 
 if (!missions.some(entry => entry.id === mission.id)) missions.push(mission);
 customDbPages[mission.id] = pages;
+

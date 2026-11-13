@@ -161,3 +161,10 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Updated the AXIS wormhole note: Level 1 Drive Lock remains until the crew clears it at Helm.
 - Marked Lifeboat available and documented the final mine speeds, rescue ship tuning, immediate red exposure, shared blue geometry, and GM zone indicator.
 - Bumped the service-worker cache to v42.
+
+## v43 - Lifeboat Flight Control and field collapse
+
+- Documented Flight Control disruption inside the nebula and restoration outside it.
+- Documented the immediate overlay removal, Relay's NO NEBULA DETECTED state, and the eight-second visual collapse after AXIS GENERATOR is destroyed.
+- Bumped the service-worker cache to v43.
+
