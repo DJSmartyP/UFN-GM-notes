@@ -33,7 +33,7 @@ const mission = {
       id: "hazard-recall",
       kind: "note",
       label: "Nebula hazard and recall",
-      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share three Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. The player ship is set non-destroyable, although its systems can be badly damaged. AXIS and rescue ships are immune to the scripted hazard."
+      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share five Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. The player ship is set non-destroyable, although its systems can be badly damaged. AXIS and rescue ships are immune to the scripted hazard."
     },
     {
       id: "rescue-flow",
@@ -107,7 +107,7 @@ const mission = {
       id: "recall-jump",
       name: "Emergency Recall Jump",
       station: "Engineering / Engineering+",
-      description: "Both engineering screens show the nebula hazard readout and share Recall Jump (3). Each use immediately returns Vanguard to its Homestead start point, logs the use, shows a popup with uses remaining and vents heat over two seconds. The control disappears from both screens after the third use. It does not repair damage."
+      description: "Both engineering screens show the nebula hazard readout and share Recall Jump (5). Each use immediately returns Vanguard to its Homestead start point, logs the use, shows a popup with uses remaining and vents heat over two seconds. The control disappears from both screens after the fifth use. It does not repair damage."
     },
     {
       id: "mine-self-destruct",
@@ -166,7 +166,7 @@ Last verified sector: G20`
 
 The field appeared within the last twenty-four hours and remains highly unstable. Preliminary scans show dense charged particles caught in rapidly shifting magnetic currents. These currents induce power surges through the hull and ship's conduits while interfering with heat dissipation. The resulting thermal load and electrical arcing spread through every ship system. Damage can build to catastrophic levels with continued exposure; propulsion, shields, weapons and sensors must all be treated as vulnerable. Do not remain in the field longer than the rescue requires.
 
-To support this rescue operation, Fleet Engineering fitted the assigned rescue vessel with an emergency Recall Jump drive before departure. It is pre-calibrated to the ship's starting point beside UFN Homestead, allowing extraction if the crew becomes trapped or critical systems begin to fail. Engineering has three recall uses available. Activation jumps the ship back instantly. The jump does not repair damaged systems; residual heat vents over approximately two seconds after arrival. Dock at Homestead for repairs and rearming before another attempt.
+To support this rescue operation, Fleet Engineering fitted the assigned rescue vessel with an emergency Recall Jump drive before departure. It is pre-calibrated to the ship's starting point beside UFN Homestead, allowing extraction if the crew becomes trapped or critical systems begin to fail. Engineering has five recall uses available. Activation jumps the ship back instantly. The jump does not repair damaged systems; residual heat vents over approximately two seconds after arrival. Dock at Homestead for repairs and rearming before another attempt.
 
 UFN Science Corps | Hazard Assessment Division`
   },
@@ -182,7 +182,9 @@ The survey data we have supplied has allowed the rescue vessel's Relay station t
 
 BLUE marks connected corridors and pockets where exposure is lower. The nebula will still cause some system damage there, but it should be minimal beside the damage sustained in RED regions. RED marks unstable gas where heat rises sharply and damage becomes progressively more severe the longer a ship remains inside. Do not treat a blue corridor as shelter.
 
-The mapped corridors branch, loop and sometimes end without an exit. Check the overlay at each junction and be prepared to retrace your course. A direct line between two contacts may cross dangerous gas even when both contacts lie in blue pockets.`
+The mapped corridors branch, loop and sometimes end without an exit. Check the overlay at each junction and be prepared to retrace your course. A direct line between two contacts may cross dangerous gas even when both contacts lie in blue pockets.
+
+Umbra has authorised temporary use of our survey systems for this rescue. When within close range of a stranded vessel, Science can use Send Nebula Data to transfer the route to its crew. We trust Fleet Command will remember this gesture when Umbra next asks for a little cooperation.`
   },
   {
     id: "axis-signal-trace",

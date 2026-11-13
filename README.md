@@ -178,3 +178,9 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Clarified that Science detects rescue ships from launch but receives Send Nebula Data only after Release Relay Route.
 - Bumped the service-worker cache to v45.
 
+## v46 - Lifeboat Umbra transit note and recall capacity
+
+- Added Umbra's temporary survey-system access and Science transfer instruction to the in-game overlay file and its exact GM reference copy.
+- Updated the hazard advisory and GM mechanics for five shared recall uses.
+- Bumped the service-worker cache to v46.
+
