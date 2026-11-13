@@ -213,7 +213,7 @@ Umbra has cracked the AXIS mine self-destruct codes surrounding the installation
 
 Weapons can transmit the Mine Self Destruct command. The ship must be within radar range of the AXIS host station to disarm its mine defense system. The transmitter will connect only when its mine screen can be detected nearby. If no AXIS mines are in range, the console will report that none have been detected. The transmitter can fire only once.
 
-Destroying individual mines before transmission will not open a lasting gap: the screen replenishes. A successful transmission destroys the mine screen and exposes the generator, but expect AXIS defenders to deploy immediately. The platform rotates slowly; gaps between its active long-range emitters offer an approach. Destroy the generator to collapse the field.`
+Destroying individual mines before transmission will not open a lasting gap: the screen replenishes. A successful transmission destroys the mine screen and exposes the generator, but expect AXIS defenders to deploy immediately.`
   }
 ];
 

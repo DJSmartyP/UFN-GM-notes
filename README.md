@@ -184,3 +184,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Updated the hazard advisory and GM mechanics for five shared recall uses.
 - Bumped the service-worker cache to v46.
 
+## v47 - Lifeboat countermeasure wording
+
+- Removed the generator approach and destruction instructions from the Umbra Mine Countermeasure file.
+- Bumped the service-worker cache to v47.
+
