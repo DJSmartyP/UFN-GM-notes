@@ -83,7 +83,7 @@ const mission = {
       id: "rescue-tracking",
       name: "Rescue tracking",
       station: "Relay",
-      description: "From launch, Relay shows the number of ships synced and docked. Within 5U of a rescue vessel it shows the detected ship's name; otherwise it reads No ship detected."
+      description: "From launch, Relay shows RESCUE STATUS, Ships Contacted and Ships Docked on three separate lines. Ships Contacted increases when Science sends a rescue vessel the nebula data; Ships Docked increases when it reaches its destination. Within 5U of a rescue vessel Relay shows its name; otherwise it reads No ship detected."
     },
     {
       id: "nebula-overlay",

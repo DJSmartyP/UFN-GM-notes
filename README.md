@@ -168,3 +168,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Documented the immediate overlay removal, Relay's NO NEBULA DETECTED state, and the eight-second visual collapse after AXIS GENERATOR is destroyed.
 - Bumped the service-worker cache to v43.
 
+## v44 - Lifeboat Relay rescue status
+
+- Updated the Relay reference for the three-line rescue status display and its contacted/docked counters.
+- Bumped the service-worker cache to v44.
+
