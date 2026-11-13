@@ -27,7 +27,7 @@ const mission = {
       id: "umbra-route",
       kind: "note",
       label: "Umbra transit data",
-      description: "After the conversation at UMB Horizon Array, press Release Relay Route. This grants Relay the Display/Hide Nebula Route control and adds Umbra Nebula Overlay to Mission Intel. Blue corridors still cause slight damage; red space drives heat and damage sharply upward. The mapped network has branches, loops and dead ends."
+      description: "After the conversation at UMB Horizon Array, press Release Relay Route. This grants Relay the Display/Hide Nebula Route control, enables Science to send route data to nearby rescue ships, and adds Umbra Nebula Overlay to Mission Intel. Blue corridors still cause slight damage; red space drives heat and damage sharply upward. The mapped network has branches, loops and dead ends."
     },
     {
       id: "hazard-recall",
@@ -95,7 +95,7 @@ const mission = {
       id: "send-nebula-data",
       name: "Send Nebula Data",
       station: "Science",
-      description: "Within 5U of an unsynced rescue ship, Science sees its name and gains Send Nebula Data. Sending the data unlocks that ship's GM release control; destroying its AXIS attackers is not required for the upload. The Science upload control is removed when Reveal AXIS Base is pressed after all four ships are synced."
+      description: "Science can detect a rescue ship within 5U from launch, but Send Nebula Data appears only after the GM presses Release Relay Route. Within 5U of an unsynced ship, sending the data unlocks that ship's GM release control; destroying its AXIS attackers is not required for the upload. The Science upload control is removed when Reveal AXIS Base is pressed after all four ships are synced."
     },
     {
       id: "axis-signal-trace",

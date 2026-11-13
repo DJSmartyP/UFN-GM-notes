@@ -173,3 +173,8 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Updated the Relay reference for the three-line rescue status display and its contacted/docked counters.
 - Bumped the service-worker cache to v44.
 
+## v45 - Lifeboat Science upload gate
+
+- Clarified that Science detects rescue ships from launch but receives Send Nebula Data only after Release Relay Route.
+- Bumped the service-worker cache to v45.
+
