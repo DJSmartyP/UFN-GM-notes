@@ -153,3 +153,11 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Added the Mission Intel root description and five exact scenario database pages, with their unlock points.
 - Used the existing Operation: Lifeboat artwork for the mission tile and added it to the offline cache.
 - Bumped the service-worker cache to v41.
+
+## v42 - Lifeboat launch and reference refinements
+
+- Removed the Mission Intel root description from the scenario and GM reference; the five named files remain.
+- Made the database files independent of the player ship's callsign and kept their operational wording in world.
+- Updated the AXIS wormhole note: Level 1 Drive Lock remains until the crew clears it at Helm.
+- Marked Lifeboat available and documented the final mine speeds, rescue ship tuning, immediate red exposure, shared blue geometry, and GM zone indicator.
+- Bumped the service-worker cache to v42.

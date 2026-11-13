@@ -9,7 +9,7 @@ const mission = {
   campaign: "UFN Operations",
   name: "Operation: Lifeboat",
   strap: "OP16 · UFN Operation",
-  status: "Coming soon · GM notes loaded · art loaded",
+  status: "Available now · GM notes loaded · art loaded",
   artwork: "assets/missions/lifeboat.png",
   artPosition: "38% 50%",
   recap: [{
@@ -33,19 +33,19 @@ const mission = {
       id: "hazard-recall",
       kind: "note",
       label: "Nebula hazard and recall",
-      description: "Vanguard alone receives the scripted nebula hazard. All systems build heat at varied rates, with additional escalating damage to five random systems excluding reactor and jump drive. Red exposure has a two-second warning before severe damage begins; the stronger red damage can cripple a ship quickly. Engineering and Engineering+ share three Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. AXIS and rescue ships are immune to the scripted hazard."
+      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share three Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. AXIS and rescue ships are immune to the scripted hazard."
     },
     {
       id: "rescue-flow",
       kind: "note",
       label: "Four rescue encounters",
-      description: "The rescue pockets are spread across the nebula in this order: UFN Asteria (68% hull), TSN Halley (44%), UFN Larkspur (32%), and UMB Helix (57%). At 15U from each ship, AXIS attackers spawn: two, two, three and three, increasing in strength. Science can send nebula data within 5U even while attackers are present. Once a ship is synced, press its Release [ship] GM button to start its safe-route return. Asteria, Halley and Larkspur dock at Homestead; Helix docks at UMB Horizon Array."
+      description: "The rescue pockets are spread across the nebula in this order: UFN Asteria (68% hull), TSN Halley (44%), UFN Larkspur (32%), and UMB Helix (57%). All have 1000 maximum hull, 600 shields, 250 impulse speed and acceleration, 35 turn speed, and 2000 warp speed. Helix cannot be destroyed; the other three remain vulnerable. At 15U from each ship, AXIS attackers spawn: two, two, three and three, increasing in strength. Science can send nebula data within 5U even while attackers are present. Once synced, press Release [ship] to send it along the shortest connected blue route. Asteria, Halley and Larkspur dock at Homestead; Helix docks at UMB Horizon Array."
     },
     {
       id: "axis-wormhole",
       kind: "note",
       label: "Optional AXIS wormhole attack",
-      description: "AXIS WH Atk (3) brings in one Adder MK7 and two Elara P2 ships through the standard wormhole arrival. It engages Drive Lock during the arrival and releases the lock after the ten-second arrival window. The button remains available for another attack."
+      description: "AXIS WH Atk (3) brings in one Adder MK7 and two Elara P2 ships through the standard wormhole arrival. It engages Level 1 Drive Lock. Helm can clear it through the standard hack control; the mission does not clear it automatically. The button remains available for another attack."
     },
     {
       id: "axis-reveal",
@@ -57,7 +57,13 @@ const mission = {
       id: "generator-finale",
       kind: "note",
       label: "Generator, mines and finale",
-      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires Vanguard within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby. Successful activation clears the screen, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator collapses the nebula."
+      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the screen, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator collapses the nebula."
+    },
+    {
+      id: "gm-zone-indicator",
+      kind: "note",
+      label: "GM zone indicator",
+      description: "A read-only GM button changes between Out, In - Blue and In - Red according to the player vessel's current nebula exposure. It uses the same hull-overlap geometry as damage and the overlay, and updates when the vessel changes zones."
     },
     {
       id: "debug-overlay",
@@ -101,22 +107,13 @@ const mission = {
       id: "mine-self-destruct",
       name: "Mine Self Destruct",
       station: "Weapons / Tactical / SinglePilot",
-      description: "After Reveal AXIS Base, the same one-use control appears on all three weapons layouts. It works only within 25U of the generator with a live AXIS mine within 5U. Out of range it shows AXIS mines not detected nearby. A successful press destroys the mine screen, exposes the generator and removes the control from all three screens."
+      description: "After Reveal AXIS Base, the same one-use control appears on all three weapons layouts. It works only within 25U of the generator with a live AXIS mine within 5U. Out of range it shows AXIS mines not detected nearby on the console used. A successful press destroys the mine screen, exposes the generator and removes the control from all three screens."
     }
   ],
   dbEntries: []
 };
 
 const pages = [
-  {
-    id: "db-root",
-    title: "Database Root Description",
-    database: "--MISSION INTEL--",
-    group: "--MISSION INTEL--",
-    trigger: "Mission start",
-    body: `UFN SCIENCE CORPS // OPERATION: LIFEBOAT
-Vessel records, field advisories and partner transmissions received aboard UFN Vanguard. New files are logged as they are authenticated.`
-  },
   {
     id: "rescue-list",
     title: "The Rescue List",
@@ -163,7 +160,7 @@ Last verified sector: G20`
 
 The field appeared within the last twenty-four hours and remains highly unstable. Preliminary scans show dense charged particles caught in rapidly shifting magnetic currents. These currents induce power surges through the hull and ship's conduits while interfering with heat dissipation. The resulting thermal load and electrical arcing spread through every ship system. Damage can build to catastrophic levels with continued exposure; propulsion, shields, weapons and sensors must all be treated as vulnerable. Do not remain in the field longer than the rescue requires.
 
-To support this rescue operation, Fleet Engineering fitted Vanguard with an emergency Recall Jump drive before departure. It is pre-calibrated to the ship's starting point beside UFN Homestead, allowing extraction if the crew becomes trapped or critical systems begin to fail. The device has three uses only, shared across Engineering and Engineering+. Activation jumps Vanguard back instantly. The jump does not repair damaged systems; residual heat vents over approximately two seconds after arrival. Dock at Homestead for repairs and rearming before another attempt.
+To support this rescue operation, Fleet Engineering fitted the assigned rescue vessel with an emergency Recall Jump drive before departure. It is pre-calibrated to the ship's starting point beside UFN Homestead, allowing extraction if the crew becomes trapped or critical systems begin to fail. Engineering has three recall uses available. Activation jumps the ship back instantly. The jump does not repair damaged systems; residual heat vents over approximately two seconds after arrival. Dock at Homestead for repairs and rearming before another attempt.
 
 UFN Science Corps | Hazard Assessment Division`
   },
@@ -175,7 +172,7 @@ UFN Science Corps | Hazard Assessment Division`
     trigger: "GM presses Release Relay Route after the Umbra briefing",
     body: `UMB HORIZON ARRAY // TRANSIT DATA FILE
 
-The survey data we have supplied has allowed Vanguard's Relay station to chart areas of the nebula that are less dangerous to cross. The Display Nebula Route control places our assessment on the shared radar; the same control can hide it again.
+The survey data we have supplied has allowed the rescue vessel's Relay station to chart areas of the nebula that are less dangerous to cross. The Display Nebula Route control places our assessment on the shared radar; the same control can hide it again.
 
 BLUE marks connected corridors and pockets where exposure is lower. The nebula will still cause some system damage there, but it should be minimal beside the damage sustained in RED regions. RED marks unstable gas where heat rises sharply and damage becomes progressively more severe the longer a ship remains inside. Do not treat a blue corridor as shelter.
 
@@ -189,10 +186,10 @@ The mapped corridors branch, loop and sometimes end without an exit. Check the o
     trigger: "GM presses Reveal AXIS Base after all four uploads and the UMB Helix encounter",
     body: `UMB HELIX // SIGNAL TRACE FILE
 
-Our survey instruments have isolated a repeating transmission inside the nebula. It leads to an AXIS installation. We have transferred the trace to Vanguard's Science station, where it appears as AXIS Signal Trace.
+Our survey instruments have isolated a repeating transmission inside the nebula. It leads to an AXIS installation. We have transferred the trace to the rescue vessel's Science station, where it appears as AXIS Signal Trace.
 
 READING THE TRACE
-The upper bearing points to the next turn towards the AXIS installation. The lower bearing is Vanguard's current heading. Bearings run clockwise from north: 000 north, 090 east, 180 south, 270 west. Bring the current heading onto the target bearing and check again as the ship advances. No reliable distance can be derived from this signal.
+The upper bearing points to the next turn towards the AXIS installation. The lower bearing is the ship's current heading. Bearings run clockwise from north: 000 north, 090 east, 180 south, 270 west. Bring the current heading onto the target bearing and check again as the ship advances. No reliable distance can be derived from this signal.
 
 The route may bend or double back; follow each updated bearing rather than steering directly towards the installation.`
   },
@@ -204,9 +201,9 @@ The route may bend or double back; follow each updated bearing rather than steer
     trigger: "GM presses Reveal AXIS Base after all four uploads and the UMB Helix encounter",
     body: `UMB HELIX // RESTRICTED COUNTERMEASURE RELEASE
 
-Umbra has cracked the AXIS mine self-destruct codes surrounding the installation we detected. The codes themselves remain classified. We are providing Vanguard with a sealed, one-use transmitter that can issue the command without exposing the underlying sequence.
+Umbra has cracked the AXIS mine self-destruct codes surrounding the installation we detected. The codes themselves remain classified. We are providing the rescue vessel with a sealed, one-use transmitter that can issue the command without exposing the underlying sequence.
 
-The Mine Self Destruct command is available at Weapons and the combined Tactical and single-pilot stations. Vanguard must be within radar range of the AXIS host station to disarm its mine defense system. The transmitter will connect only when its mine screen can be detected nearby. If no AXIS mines are in range, the console will report that none have been detected. The transmitter can fire only once.
+Weapons can transmit the Mine Self Destruct command. The ship must be within radar range of the AXIS host station to disarm its mine defense system. The transmitter will connect only when its mine screen can be detected nearby. If no AXIS mines are in range, the console will report that none have been detected. The transmitter can fire only once.
 
 Destroying individual mines before transmission will not open a lasting gap: the screen replenishes. A successful transmission destroys the mine screen and exposes the generator, but expect AXIS defenders to deploy immediately. The platform rotates slowly; gaps between its active long-range emitters offer an approach. Destroy the generator to collapse the field.`
   }
