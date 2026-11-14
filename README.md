@@ -189,3 +189,12 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Removed the generator approach and destruction instructions from the Umbra Mine Countermeasure file.
 - Bumped the service-worker cache to v47.
 
+## v48 - Lifeboat perimeter defenses
+
+- Documented the AXIS warp jammer and mine perimeter, including the nonrespawning entrance mines and Mine Self Destruct cleanup.
+- Removed the unused black hole from the mission map.
+- Increased blue-zone exposure to one 1% hit on a random eligible system every three seconds, with a 10% health floor; red exposure remains the severe tier.
+- Separated the jammer and mine lines so perimeter mines do not repeatedly detonate against the jammers.
+- Tightened perimeter mine spacing from 3U to 1.5U.
+- Updated the GM zone indicator wording and its position above the debug control.
+- Bumped the service-worker cache to v48.

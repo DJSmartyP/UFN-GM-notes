@@ -30,10 +30,16 @@ const mission = {
       description: "After the conversation at UMB Horizon Array, press Release Relay Route. This grants Relay the Display/Hide Nebula Route control, enables Science to send route data to nearby rescue ships, and adds Umbra Nebula Overlay to Mission Intel. Blue corridors still cause slight damage; red space drives heat and damage sharply upward. The mapped network has branches, loops and dead ends."
     },
     {
+      id: "perimeter-defenses",
+      kind: "note",
+      label: "Nebula perimeter defenses",
+      description: "AXIS warp jammers overlap around all four edges of the field, blocking a warp approach directly into an interior blue pocket. The small jammers sit outside the boundary and regenerate if destroyed. AXIS mines form a 1.5U-spaced line inside the boundary, separated from the jammers so their proximity triggers do not detonate against them. The mines regenerate, except for those at the northwestern mapped entrance: these are present from launch but stay cleared once destroyed. Mine Self Destruct removes both perimeter mines and jammers."
+    },
+    {
       id: "hazard-recall",
       kind: "note",
       label: "Nebula hazard and recall",
-      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems excluding reactor and jump drive. Engineering and Engineering+ share five Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. The player ship is set non-destroyable, although its systems can be badly damaged. AXIS and rescue ships are immune to the scripted hazard."
+      description: "The player vessel alone receives the scripted nebula hazard. If any part of its hull overlaps a blue corridor or pocket, blue exposure applies; the same polygons drive the radar overlay and damage check. Blue adds gentle heat and removes 1% health from one randomly chosen eligible system every three seconds, never reducing it below 10%; reactor and jump drive are excluded. Fully in red, heat and direct damage begin on the first update, with escalating damage to five random systems. Engineering and Engineering+ share five Recall Jumps to the Homestead start point. Recall vents heat over two seconds but does not repair damage. The player ship is set non-destroyable, although its systems can be badly damaged. AXIS and rescue ships are immune to the scripted hazard."
     },
     {
       id: "rescue-flow",
@@ -57,13 +63,13 @@ const mission = {
       id: "generator-finale",
       kind: "note",
       label: "Generator, mines and finale",
-      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the screen, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator immediately removes the blue/red overlay and ends scripted exposure. Relay changes to NO NEBULA DETECTED; the nebula then flickers and disappears in random patches over about eight seconds."
+      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the generator screen and perimeter mines and jammers, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator immediately removes the blue/red overlay and ends scripted exposure. Relay changes to NO NEBULA DETECTED; the nebula then flickers and disappears in random patches over about eight seconds."
     },
     {
       id: "gm-zone-indicator",
       kind: "note",
       label: "GM zone indicator",
-      description: "A read-only GM button changes between Out, In - Blue and In - Red according to the player vessel's current nebula exposure. It uses the same hull-overlap geometry as damage and the overlay, and updates when the vessel changes zones."
+      description: "A read-only GM button immediately above DEBUG Nebula Overlay changes between Not In Nebula, In Nebula - BLUE and In Nebula - RED according to the player vessel's current nebula exposure. It uses the same hull-overlap geometry as damage and the overlay, and updates when the vessel changes zones."
     },
     {
       id: "debug-overlay",
@@ -219,4 +225,3 @@ Destroying individual mines before transmission will not open a lasting gap: the
 
 if (!missions.some(entry => entry.id === mission.id)) missions.push(mission);
 customDbPages[mission.id] = pages;
-
