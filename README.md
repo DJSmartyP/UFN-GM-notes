@@ -196,5 +196,12 @@ GM reference notes now always span the full Special Mechanisms grid, regardless 
 - Increased blue-zone exposure to one 1% hit on a random eligible system every three seconds, with a 10% health floor; red exposure remains the severe tier.
 - Separated the jammer and mine lines so perimeter mines do not repeatedly detonate against the jammers.
 - Tightened perimeter mine spacing from 3U to 1.5U.
+
+## v49 - Lifeboat perimeter performance
+
+- Removed the outer mine ring and all perimeter regeneration checks.
+- Retained 60 overlapping AXIS warp jammers with 5,000 hull each.
+- Restored the original rescue-ship waypoint behavior and reduced repeated Relay status writes.
+- Bumped the service-worker cache to v49.
 - Updated the GM zone indicator wording and its position above the debug control.
 - Bumped the service-worker cache to v48.

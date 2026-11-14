@@ -32,8 +32,8 @@ const mission = {
     {
       id: "perimeter-defenses",
       kind: "note",
-      label: "Nebula perimeter defenses",
-      description: "AXIS warp jammers overlap around all four edges of the field, blocking a warp approach directly into an interior blue pocket. The small jammers sit outside the boundary and regenerate if destroyed. AXIS mines form a 1.5U-spaced line inside the boundary, separated from the jammers so their proximity triggers do not detonate against them. The mines regenerate, except for those at the northwestern mapped entrance: these are present from launch but stay cleared once destroyed. Mine Self Destruct removes both perimeter mines and jammers."
+      label: "Nebula perimeter jammers",
+      description: "Sixty AXIS warp jammers overlap around all four edges of the field, blocking a warp approach directly into an interior blue pocket. Each has 5,000 hull and does not regenerate if destroyed. There are no perimeter mines. Mine Self Destruct removes the remaining perimeter jammers alongside the separate generator mine screen."
     },
     {
       id: "hazard-recall",
@@ -63,7 +63,7 @@ const mission = {
       id: "generator-finale",
       kind: "note",
       label: "Generator, mines and finale",
-      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the generator screen and perimeter mines and jammers, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator immediately removes the blue/red overlay and ends scripted exposure. Relay changes to NO NEBULA DETECTED; the nebula then flickers and disappears in random patches over about eight seconds."
+      description: "AXIS GENERATOR is a Defense platform with 150 shields, 200 hull, slow continuous rotation and three long active beams separated by inactive emitters. Four moving rings contain 104 AXIS mines; destroyed mines replenish until the countermeasure is used. Mine Self Destruct is one use and requires the player vessel within 25U of the generator and a live mine within 5U. An early press reports AXIS mines not detected nearby on the console used. Successful activation clears the generator mine screen and perimeter jammers, makes the generator vulnerable and launches four AXIS defenders. Destroying the generator immediately removes the blue/red overlay and ends scripted exposure. Relay changes to NO NEBULA DETECTED; the nebula then flickers and disappears in random patches over about eight seconds."
     },
     {
       id: "gm-zone-indicator",
