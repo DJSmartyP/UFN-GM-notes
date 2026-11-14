@@ -33,13 +33,13 @@ const mission = {
       id: "perimeter-defenses",
       kind: "note",
       label: "Nebula perimeter jammers",
-      description: "Eighty-five AXIS warp jammers with 4.5U range cover all four edges of the field alongside 120 perimeter mines. Eighty-four jammers have 1000 hull and refresh when destroyed. The entrance jammer at (173867, 39663) has 50 hull and never refreshes. Mines and jammers are spaced apart. The perimeter is checked for destroyed defenses every five seconds; the three mines at the marked entrance are present at launch but do not respawn. Mine Self Destruct affects only the generator's separate mine screen. Destroying AXIS GENERATOR removes all remaining perimeter mines and warp jammers."
+      description: "Eighty AXIS warp jammers with 4.1U range sit on the nebula boundary, 1.5U closer to the field than before. Their fields overlap slightly and cover all four edges. The 120 perimeter mines remain at their original positions, outside each jammer's physical mine-blast radius. Seventy-eight jammers have 1000 hull and refresh when destroyed. The two jammers flanking the entrance, at (176867, 37163) and (176867, 44663), have 50 hull and never refresh; the former centre entrance jammer has been removed. The perimeter is checked for destroyed defenses every five seconds; the three mines at the marked entrance are present at launch but do not respawn. Mine Self Destruct affects only the generator's separate mine screen. Destroying AXIS GENERATOR removes all remaining perimeter mines and warp jammers."
     },
     {
       id: "map-asteroids",
       kind: "note",
       label: "Map asteroids and quarantine markers",
-      description: "Forty-four physical asteroids occupy fixed positions across the wider A10-A23 and J9-J23 map area, with sizes ranging from small rocks to giant bodies. Thirty-six quarantine buoys encircle the field, with one added between each original pair. The asteroid layout is defined directly in OP16 Lua."
+      description: "One hundred thirty-two physical asteroids occupy fixed positions across the wider A10-A23 and J9-J23 map area, with sizes ranging from small rocks to giant bodies. Thirty-six quarantine buoys encircle the field, with one added between each original pair. The asteroid layout is defined directly in OP16 Lua. The former black hole has been removed."
     },
     {
       id: "hazard-recall",
